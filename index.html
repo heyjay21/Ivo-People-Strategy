@@ -1,0 +1,3473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ivo — People Strategy · Head of People Followup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #1a1a18;
+  --ink-2: #3d3d39;
+  --ink-3: #6b6b65;
+  --ink-4: #9c9c95;
+  --paper: #faf9f6;
+  --paper-2: #f2f0eb;
+  --paper-3: #e8e5de;
+  --accent: #2d5a3d;
+  --accent-2: #4a8c61;
+  --accent-3: #d4eddf;
+  --warm: #c4631a;
+  --warm-2: #f5e6d3;
+  --blue: #1d4b8c;
+  --blue-2: #d6e4f7;
+  --border: rgba(26,26,24,0.10);
+  --border-2: rgba(26,26,24,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--paper);
+  color: var(--ink-2);
+  font-family: 'DM Sans', -apple-system, system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body { min-height: 100vh; }
+
+a { color: inherit; text-decoration: none; }
+
+/* ---------- NAV ---------- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: rgba(250,249,246,0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.nav-brand {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.nav-brand .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 100px;
+  vertical-align: middle;
+  margin: 0 6px 3px 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--ink-3);
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover { background: var(--paper-2); color: var(--ink-2); }
+
+.nav-link.active {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* ---------- LAYOUT ---------- */
+main {
+  padding-top: 64px;
+}
+
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 40px 120px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  display: none;
+}
+
+.section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+  margin-bottom: 18px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+h1 { font-size: 56px; margin-bottom: 24px; }
+h2 { font-size: 40px; margin-bottom: 22px; }
+h3 { font-size: 26px; margin-bottom: 14px; }
+h4 { font-size: 20px; margin-bottom: 10px; }
+
+h1 em, h2 em, h3 em, h4 em {
+  color: var(--accent);
+  font-style: italic;
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+}
+
+.lede {
+  font-size: 19px;
+  font-weight: 300;
+  color: var(--ink-3);
+  line-height: 1.55;
+  margin-bottom: 48px;
+  max-width: 700px;
+}
+
+p { margin-bottom: 16px; color: var(--ink-3); }
+p strong { color: var(--ink-2); font-weight: 500; }
+
+/* ---------- BUTTONS ---------- */
+.btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  background: transparent;
+  border: 1px solid var(--border-2);
+  color: var(--ink-2);
+  padding: 9px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn:hover { background: var(--paper-2); border-color: var(--ink-3); }
+
+.btn-dark {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+}
+
+.btn-dark:hover { background: rgba(255,255,255,0.08); }
+
+/* ---------- CARDS ---------- */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.nav-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 48px 0;
+}
+
+.nav-card {
+  background: var(--paper);
+  padding: 28px 28px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-card:hover { background: var(--paper-2); }
+
+.nav-card .nc-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+}
+
+.nav-card .nc-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 22px;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.nav-card .nc-title .arrow {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--ink-3);
+}
+
+.nav-card .nc-desc {
+  font-size: 14px;
+  color: var(--ink-3);
+  margin-top: 4px;
+  line-height: 1.55;
+}
+
+/* ---------- CALLOUTS ---------- */
+.callout {
+  border-left: 2px solid var(--accent);
+  padding: 4px 0 4px 22px;
+  margin: 32px 0;
+}
+
+.callout p {
+  color: var(--ink-2);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.callout-warm {
+  background: var(--warm-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 24px 0;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+
+/* ---------- METRIC CARDS ---------- */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 32px 0 48px;
+}
+
+.metric {
+  background: var(--paper);
+  padding: 22px 20px;
+}
+
+.metric-value {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 28px;
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.metric-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+}
+
+.metric-sub {
+  font-size: 12px;
+  color: var(--ink-3);
+  margin-top: 4px;
+}
+
+/* ---------- ACCORDIONS ---------- */
+.accordion {
+  border: 1px solid var(--border-2);
+  border-radius: 16px;
+  margin-bottom: 14px;
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.accordion-head {
+  padding: 22px 26px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  user-select: none;
+}
+
+.accordion-head:hover { background: var(--paper-2); }
+
+.accordion-head .ah-left { flex: 1; }
+
+.accordion-head .ah-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+  margin-bottom: 6px;
+}
+
+.accordion-head .ah-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 22px;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.accordion-head .ah-sub {
+  font-size: 14px;
+  color: var(--ink-3);
+  margin-top: 6px;
+}
+
+.accordion-chevron {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: var(--ink-3);
+  transition: transform 0.25s ease;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.accordion.open .accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.accordion-body {
+  display: none;
+  padding: 0 26px 26px;
+}
+
+.accordion.open .accordion-body { display: block; }
+
+.accordion-body p { font-size: 15px; }
+
+/* nested accordion (week-level, smaller) */
+.acc-nested {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  background: var(--paper-2);
+}
+
+.acc-nested .accordion-head {
+  padding: 14px 18px;
+}
+
+.acc-nested .ah-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0;
+}
+
+.acc-nested .ah-sub {
+  font-size: 13px;
+  margin-top: 2px;
+  color: var(--ink-3);
+}
+
+.acc-nested .accordion-body {
+  padding: 0 18px 18px;
+}
+
+.acc-nested .accordion-body ul {
+  list-style: none;
+  margin-top: 4px;
+}
+
+.acc-nested .accordion-body li {
+  font-size: 14px;
+  color: var(--ink-2);
+  padding: 6px 0 6px 18px;
+  position: relative;
+  line-height: 1.55;
+}
+
+.acc-nested .accordion-body li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--ink-4);
+}
+
+/* ---------- TABLE ---------- */
+.tbl {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 24px 0;
+  background: var(--paper);
+}
+
+.tbl th {
+  background: var(--paper-2);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tbl td {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 300;
+  color: var(--ink-2);
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.tbl tr:last-child td { border-bottom: none; }
+
+.tbl td.role-name {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.tbl td.unlocks {
+  color: var(--ink-3);
+  font-size: 13px;
+}
+
+/* ---------- BADGES ---------- */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 400;
+  padding: 3px 10px;
+  border-radius: 100px;
+  letter-spacing: 0.02em;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.badge-w1 { background: var(--accent-3); color: var(--accent); }
+.badge-w2 { background: var(--blue-2); color: var(--blue); }
+.badge-w3 { background: var(--warm-2); color: var(--warm); }
+.badge-quiet { background: var(--paper-2); color: var(--ink-3); border: 1px solid var(--border); }
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: var(--paper-2);
+  color: var(--ink-3);
+  border: 1px solid var(--border);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ---------- ORG CHART ---------- */
+.org-chart {
+  margin: 36px 0;
+  padding: 36px 24px 24px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--paper);
+}
+
+.org-row-top {
+  display: flex;
+  justify-content: center;
+}
+
+.node {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 1.35;
+  position: relative;
+  z-index: 2;
+}
+
+.node-cpo {
+  background: var(--ink);
+  color: var(--paper);
+  font-weight: 400;
+  padding: 14px 24px;
+  font-size: 14px;
+}
+
+.node-pillar {
+  background: var(--accent-3);
+  color: var(--accent);
+  font-weight: 500;
+  border: 1px solid rgba(45,90,61,0.18);
+}
+
+.node-ic {
+  background: var(--paper);
+  color: var(--ink-2);
+  border: 1px solid var(--border);
+  font-size: 12.5px;
+}
+
+.node-rpo {
+  background: var(--warm-2);
+  color: var(--warm);
+  border: 1px dashed rgba(196,99,26,0.35);
+  font-size: 12.5px;
+  font-style: italic;
+  text-align: center;
+}
+
+.node-ghost {
+  background: var(--paper-2);
+  color: var(--ink-3);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+  padding: 10px 18px;
+}
+
+.node-ghost .node-ghost-tag {
+  font-size: 10px;
+  color: var(--ink-4);
+  margin-left: 6px;
+}
+
+.node .node-sub {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 3px;
+  color: rgba(255,255,255,0.7);
+}
+
+.node .node-sub-quiet {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 3px;
+  opacity: 0.75;
+}
+
+.node-hro {
+  background: var(--accent-3);
+  color: var(--accent);
+  border: 1px solid rgba(45,90,61,0.18);
+}
+
+.node-dot {
+  background: var(--blue-2);
+  color: var(--blue);
+  border: 1px solid rgba(29,75,140,0.18);
+}
+
+/* New 2-pillar layout */
+.org-pillars-2 {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) 3fr;
+  gap: 18px;
+  position: relative;
+  padding-top: 28px;
+  align-items: start;
+}
+
+.org-pillars-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12.5%;
+  right: 37.5%;
+  height: 1px;
+  background: var(--border-2);
+}
+
+.org-pillars-2 .org-pillar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.org-pillars-2 .org-pillar::before {
+  content: '';
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  width: 1px;
+  height: 28px;
+  background: var(--border-2);
+}
+
+.org-pillars-2 .node-pillar {
+  width: 92%;
+  text-align: center;
+}
+
+/* Talent sub-groups */
+.org-talent-subs {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  position: relative;
+  width: 100%;
+  padding-top: 26px;
+}
+
+.org-talent-subs::before {
+  /* Vertical from Talent header down to subgroups bar */
+  content: '';
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  width: 1px;
+  height: 24px;
+  background: var(--border-2);
+}
+
+.org-talent-subs::after {
+  /* Horizontal connector across sub-group centers */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(100% / 6);
+  right: calc(100% / 6);
+  height: 1px;
+  background: var(--border-2);
+}
+
+.org-tg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.org-tg::before {
+  content: '';
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  width: 1px;
+  height: 26px;
+  background: var(--border-2);
+}
+
+.org-tg .tg-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+  text-align: center;
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+}
+
+.org-tg .node {
+  font-size: 11.5px;
+  padding: 9px 10px;
+  text-align: center;
+  background: var(--paper);
+  z-index: 2;
+}
+
+/* RPO section under chart */
+.org-rpo-section {
+  margin-top: 36px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--border-2);
+}
+
+.org-rpo-section .org-rpo-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ink-4);
+  text-align: center;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
+.org-rpo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.org-foot {
+  margin-top: 22px;
+  padding: 14px 18px;
+  background: var(--paper-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--ink-3);
+}
+
+.org-line-down {
+  width: 1px;
+  height: 28px;
+  background: var(--border-2);
+  margin: 0 auto;
+}
+
+.org-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  position: relative;
+  padding-top: 28px;
+}
+
+.org-pillars::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc((100% - 32px) / 6);
+  right: calc((100% - 32px) / 6);
+  height: 1px;
+  background: var(--border-2);
+}
+
+.org-pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.org-pillar::before {
+  content: '';
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  width: 1px;
+  height: 28px;
+  background: var(--border-2);
+}
+
+.org-pillar-children {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+
+.org-pillar-children::before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  bottom: 6px;
+  left: 50%;
+  width: 1px;
+  background: var(--border-2);
+  z-index: 0;
+}
+
+.org-pillar-children .node {
+  width: 92%;
+}
+
+.org-rpo-row {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--border-2);
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.org-rpo-row .org-rpo-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+  align-self: center;
+}
+
+/* ---------- DARK STRIP ---------- */
+.dark-strip {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 16px;
+  padding: 36px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  margin: 36px 0;
+}
+
+.dark-strip .ds-text { flex: 1; }
+
+.dark-strip h3 {
+  color: var(--paper);
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.dark-strip h3 em {
+  color: var(--accent-2);
+  font-style: italic;
+}
+
+.dark-strip .ds-sub {
+  color: rgba(250,249,246,0.7);
+  font-size: 14px;
+  line-height: 1.55;
+  max-width: 460px;
+}
+
+.dark-strip .ds-arrow {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 36px;
+  color: rgba(250,249,246,0.5);
+  margin-right: 14px;
+}
+
+/* ---------- CAPACITY PLANNER ---------- */
+.planner {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--paper);
+  padding: 28px;
+  margin: 24px 0;
+}
+
+.planner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-field label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+}
+
+.input-field input[type="number"] {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.input-field input[type="number"]:focus { border-color: var(--accent); }
+
+.input-field .slider-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.input-field input[type="range"] {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  background: var(--border-2);
+  border-radius: 100px;
+  outline: none;
+}
+
+.input-field input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: var(--ink);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.input-field input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: var(--ink);
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+}
+
+.input-field .slider-val {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  width: 52px;
+  text-align: right;
+  font-weight: 500;
+}
+
+.outputs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.output {
+  background: var(--paper);
+  padding: 22px 18px;
+}
+
+.output .o-value {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 28px;
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.output .o-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+  margin-top: 6px;
+}
+
+.insight {
+  margin-top: 22px;
+  padding: 18px 20px;
+  border-radius: 10px;
+  background: var(--paper-2);
+  border: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+
+.insight strong { color: var(--ink); font-weight: 500; }
+
+/* ---------- BROWSER MOCKUP ---------- */
+.browser {
+  border: 1px solid var(--border-2);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--paper);
+  margin: 28px 0;
+}
+
+.browser-chrome {
+  background: var(--paper-2);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.browser-dots { display: flex; gap: 6px; }
+.browser-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 100px;
+  background: var(--ink-4);
+  opacity: 0.45;
+}
+.browser-dots span:nth-child(1) { background: var(--warm); opacity: 0.7; }
+.browser-dots span:nth-child(2) { background: var(--ink-4); opacity: 0.6; }
+.browser-dots span:nth-child(3) { background: var(--accent-2); opacity: 0.7; }
+
+.browser-url {
+  flex: 1;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.browser-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--paper);
+  padding: 0 16px;
+}
+
+.browser-tab {
+  padding: 12px 16px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12.5px;
+  color: var(--ink-3);
+  border-bottom: 1px solid transparent;
+  cursor: default;
+}
+
+.browser-tab.active {
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.browser-body {
+  padding: 24px;
+}
+
+.browser-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.browser-metric {
+  background: var(--paper);
+  padding: 16px;
+}
+
+.browser-metric .bm-val {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 22px;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.browser-metric .bm-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+  margin-top: 4px;
+}
+
+.browser-metric .bm-delta {
+  font-size: 11px;
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+.browser-metric .bm-delta.neg { color: var(--warm); }
+
+/* ---------- INCENTIVE / FILL BARS ---------- */
+.section-divider {
+  margin: 64px 0 36px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+}
+
+.fill-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.fill-label {
+  width: 140px;
+  font-size: 13px;
+  color: var(--ink-2);
+  font-weight: 400;
+}
+
+.fill-track {
+  flex: 1;
+  height: 6px;
+  background: var(--paper-3);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.fill-bar {
+  height: 100%;
+  background: var(--accent-2);
+  border-radius: 100px;
+}
+
+.fill-pct {
+  width: 40px;
+  text-align: right;
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+/* ---------- PILLAR CARDS (employer brand) ---------- */
+.pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.pillar {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 32px;
+  background: var(--paper);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.pillar-num {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 64px;
+  color: var(--paper-3);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.pillar-body h4 {
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.pillar-body p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+/* ---------- STEP LIST ---------- */
+.steplist {
+  list-style: none;
+  margin: 8px 0 16px;
+  counter-reset: step;
+}
+
+.steplist li {
+  position: relative;
+  padding: 10px 0 10px 36px;
+  font-size: 15px;
+  color: var(--ink-2);
+  border-bottom: 1px solid var(--border);
+  line-height: 1.55;
+  counter-increment: step;
+}
+
+.steplist li:last-child { border-bottom: none; }
+
+.steplist li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--ink-4);
+}
+
+/* ---------- MISC TEXT BLOCKS ---------- */
+.text-block { margin: 24px 0; }
+
+.text-block p { font-size: 15.5px; }
+
+.weeks-list {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dotsep {
+  display: inline-block;
+  margin: 0 8px;
+  color: var(--ink-4);
+}
+
+/* ---------- CAREERS CTA + MOCKUP ---------- */
+.careers-cta {
+  margin: 36px 0 18px;
+}
+
+.careers-cta .cc-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+  margin-bottom: 12px;
+}
+
+.careers-cta .cc-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--paper);
+  padding: 22px 26px;
+}
+
+.careers-cta .cc-copy {
+  flex: 1;
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--ink-3);
+  line-height: 1.55;
+}
+
+.careers-cta .btn {
+  flex-shrink: 0;
+}
+
+.careers-hero {
+  padding: 16px 4px 22px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 18px;
+}
+
+.careers-hero .ch-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+  margin-bottom: 10px;
+}
+
+.careers-hero .ch-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.careers-hero .ch-title em {
+  color: var(--accent);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.careers-hero .ch-sub {
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.55;
+  max-width: 540px;
+  margin-bottom: 14px;
+}
+
+.careers-hero .ch-meta {
+  font-size: 11px;
+  color: var(--ink-4);
+  letter-spacing: 0.02em;
+}
+
+.careers-roles {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.careers-role {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  background: var(--paper);
+  transition: background 0.15s ease;
+}
+
+.careers-role:last-child { border-bottom: none; }
+.careers-role:hover { background: var(--paper-2); }
+
+.careers-role .cr-main { flex: 1; min-width: 0; }
+
+.careers-role .cr-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.careers-role .cr-meta {
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.careers-role .cr-comp {
+  color: var(--ink-2);
+  font-weight: 400;
+}
+
+.cr-btn {
+  font-size: 12px;
+  padding: 7px 14px;
+  flex-shrink: 0;
+}
+
+.careers-foot {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--paper-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.careers-foot .cf-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+  margin-bottom: 4px;
+}
+
+.careers-foot .cf-body {
+  font-size: 13px;
+  color: var(--ink-3);
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+#careers-mockup {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+#careers-mockup.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ----- careers mockup body (full Ivo-style brand page) ----- */
+.cm-body {
+  padding: 0 32px 36px;
+  background: var(--paper);
+}
+
+.cm-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  border-bottom: 1px solid var(--border);
+  background: var(--paper);
+}
+
+.cm-logo {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.cm-nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 11.5px;
+  color: var(--ink-4);
+}
+
+.cm-nav-links .active { color: var(--ink); font-weight: 500; }
+
+.cm-nav-btn {
+  font-size: 11.5px;
+  padding: 6px 14px;
+  border-radius: 100px;
+}
+
+.cm-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-4);
+  margin-bottom: 14px;
+}
+
+.cm-eyebrow-dark { color: rgba(250,249,246,0.45); }
+
+.cm-section {
+  padding: 44px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cm-section:last-child { border-bottom: none; }
+
+.cm-twocol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Hero */
+.cm-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cm-hero-h {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 38px;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.cm-hero-h em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent);
+}
+
+.cm-hero-body {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-3);
+  margin-bottom: 22px;
+  font-weight: 300;
+}
+
+.cm-hero-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.cm-pill {
+  font-size: 12.5px;
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1px solid var(--border-2);
+}
+
+/* Stats */
+.cm-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.cm-stat {
+  padding: 14px 0;
+  border-top: 1px solid var(--border-2);
+}
+
+.cm-stat:last-child { border-bottom: 1px solid var(--border-2); }
+
+.cm-stat-num {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 38px;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.cm-stat-label {
+  font-size: 12px;
+  color: var(--ink-3);
+  line-height: 1.4;
+}
+
+/* Section heading */
+.cm-section-h {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.cm-section-h em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 300;
+}
+
+.cm-section-body {
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.65;
+  font-weight: 300;
+}
+
+/* Video frame */
+.cm-video {
+  background: var(--ink);
+  border-radius: 10px;
+  aspect-ratio: 16/10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cm-play {
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid rgba(250,249,246,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.cm-play-tri {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 9px;
+  border-color: transparent transparent transparent rgba(250,249,246,0.7);
+  margin-left: 2px;
+}
+
+.cm-video-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(250,249,246,0.35);
+}
+
+.cm-vp {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  gap: 3px;
+}
+
+.cm-vp span {
+  height: 2px;
+  border-radius: 1px;
+  flex: 1;
+  background: rgba(250,249,246,0.1);
+}
+
+.cm-vp .cm-vp-d { background: rgba(250,249,246,0.35); }
+.cm-vp .cm-vp-n { background: rgba(250,249,246,0.8); }
+
+/* Scenes */
+.cm-scenes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.cm-scene {
+  border-radius: 10px;
+  aspect-ratio: 3/2;
+  position: relative;
+  overflow: hidden;
+}
+
+.cm-scene-blue { background: #28343E; }
+.cm-scene-green { background: #1E2C22; }
+.cm-scene-warm { background: #2E2018; }
+
+.cm-scene-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  background: rgba(26,26,24,0.5);
+}
+
+.cm-scene-text {
+  font-size: 11px;
+  color: rgba(250,249,246,0.85);
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.cm-scene-sub {
+  font-size: 10px;
+  color: rgba(250,249,246,0.5);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Pull quote */
+.cm-pq {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 18px;
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+
+.cm-pq-mark {
+  font-family: 'Fraunces', serif;
+  font-size: 56px;
+  line-height: 0.6;
+  color: var(--ink-4);
+  padding-top: 6px;
+}
+
+.cm-pq-quote {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.cm-pq-attr {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--ink-4);
+  text-transform: uppercase;
+}
+
+/* Life grid */
+.cm-life-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin-top: 22px;
+}
+
+.cm-life {
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+}
+
+.cm-life:nth-child(odd) {
+  padding-right: 32px;
+  border-right: 1px solid var(--border);
+}
+
+.cm-life:nth-child(even) {
+  padding-left: 32px;
+}
+
+.cm-life-num {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.cm-life-h {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 4px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.cm-life-b {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  line-height: 1.55;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* Dark beliefs block */
+.cm-dark {
+  background: var(--ink);
+  border-radius: 16px;
+  padding: 36px 32px;
+  margin: 36px 0;
+}
+
+.cm-dark-h {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+
+.cm-dark-h em {
+  font-style: italic;
+  color: var(--accent-2);
+  font-weight: 300;
+}
+
+.cm-dark-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 22px;
+}
+
+.cm-dark-h-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--paper);
+  border-top: 1px solid rgba(250,249,246,0.12);
+  padding-top: 12px;
+  margin-bottom: 8px;
+}
+
+.cm-dark-b {
+  font-size: 11.5px;
+  color: rgba(250,249,246,0.5);
+  line-height: 1.6;
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+}
+
+/* Fit / Thrives */
+.cm-fit {
+  display: flex;
+  flex-direction: column;
+}
+
+.cm-fit-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  border-top: 1px solid var(--border);
+  padding: 12px 0;
+}
+
+.cm-fit-row:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.cm-fit-label-y, .cm-fit-label-n {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.cm-fit-label-y { color: var(--accent); }
+.cm-fit-label-n { color: var(--ink-4); }
+
+.cm-fit-y { font-size: 13px; color: var(--ink); line-height: 1.35; }
+.cm-fit-n { font-size: 13px; color: var(--ink-4); line-height: 1.35; }
+
+/* Visa block */
+.cm-visa {
+  background: var(--warm-2);
+  border-radius: 12px;
+  padding: 22px 26px;
+  margin: 28px 0;
+}
+
+.cm-visa-h {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 5px;
+}
+
+.cm-visa-b {
+  font-size: 12.5px;
+  color: var(--ink-3);
+  line-height: 1.6;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* Q&A */
+.cm-qa-h {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+
+.cm-qa-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 32px;
+  border-top: 1px solid var(--border);
+  padding: 18px 0;
+}
+
+.cm-qa-row:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.cm-qa-q {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.4;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.cm-qa-a {
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.65;
+  font-weight: 300;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.cm-qa-a strong { color: var(--ink); font-weight: 500; }
+
+@media (max-width: 720px) {
+  .careers-cta .cc-row { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .careers-role { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .careers-foot { flex-direction: column; align-items: flex-start; }
+  .careers-hero .ch-title { font-size: 22px; }
+  .cm-hero, .cm-twocol { grid-template-columns: 1fr; gap: 28px; }
+  .cm-scenes, .cm-dark-grid, .cm-life-grid { grid-template-columns: 1fr; }
+  .cm-life:nth-child(odd) { padding-right: 0; border-right: none; }
+  .cm-life:nth-child(even) { padding-left: 0; }
+  .cm-fit-row, .cm-qa-row { grid-template-columns: 1fr; gap: 12px; }
+  .cm-hero-h { font-size: 28px; }
+  .cm-section-h { font-size: 22px; }
+  .cm-dark { padding: 28px 22px; }
+  .cm-nav-links { display: none; }
+  .cm-body, .cm-nav { padding-left: 18px; padding-right: 18px; }
+}
+
+@media (max-width: 720px) {
+  .nav-inner { padding: 0 18px; gap: 12px; }
+  .nav-links { gap: 0; }
+  .nav-link { padding: 6px 8px; font-size: 12px; }
+  .section { padding: 40px 22px 80px; }
+  h1 { font-size: 38px; }
+  h2 { font-size: 30px; }
+  .nav-cards { grid-template-columns: 1fr; }
+  .metrics, .outputs, .browser-metrics { grid-template-columns: 1fr 1fr; }
+  .planner-grid { grid-template-columns: 1fr; }
+  .org-pillars { grid-template-columns: 1fr; }
+  .org-pillars::before { display: none; }
+  .org-pillar::before { display: none; }
+  .org-pillars-2 { grid-template-columns: 1fr; }
+  .org-pillars-2::before { display: none; }
+  .org-pillars-2 .org-pillar::before { display: none; }
+  .org-talent-subs { grid-template-columns: 1fr; gap: 18px; }
+  .org-talent-subs::before { display: none; }
+  .org-talent-subs::after { display: none; }
+  .org-tg::before { display: none; }
+  .org-rpo-grid { grid-template-columns: 1fr; }
+  .pillar { grid-template-columns: 1fr; gap: 6px; }
+  .pillar-num { font-size: 44px; }
+  .dark-strip { flex-direction: column; align-items: flex-start; gap: 18px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand"><span class="dot"></span>ivo <em>· people strategy</em></div>
+    <div class="nav-links">
+      <a class="nav-link active" data-section="overview">Overview</a>
+      <a class="nav-link" data-section="plan">12-Week Plan</a>
+      <a class="nav-link" data-section="org">Org &amp; Team Build</a>
+      <a class="nav-link" data-section="capacity">Capacity</a>
+      <a class="nav-link" data-section="brand">Employer Brand</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============== OVERVIEW ============== -->
+<section class="section active" id="overview">
+  <div class="section-label">Post-interview followup · Head of People</div>
+  <h1>A people strategy built for the team that <em>raises the bar</em>.</h1>
+  <p class="lede">Ivo from 60 to 180 by end of 2026. Twelve weeks to stand up the function. A 14-person People team — eleven FTE plus three time-boxed RPO contractors — built to ship the headcount without compromising the bar. The plan, the trade-offs, and the operating model below.</p>
+
+  <div class="nav-cards">
+    <div class="nav-card" data-go="plan">
+      <div class="nc-label">01 — Phased entry</div>
+      <div class="nc-title">12-Week Plan <span class="arrow">→</span></div>
+      <div class="nc-desc">Listen, build, harden. Week-by-week execution against two root problems: low top-of-funnel volume and an interview process that runs too long.</div>
+    </div>
+    <div class="nav-card" data-go="org">
+      <div class="nc-label">02 — Structure &amp; team</div>
+      <div class="nc-title">Org &amp; Team Build <span class="arrow">→</span></div>
+      <div class="nc-desc">Head of People at the top — operator, not policy owner. Two directors below: HR Ops and Talent. Ten FTE plus three RPO contractors. Plus the H2 incentive plan, with math.</div>
+    </div>
+    <div class="nav-card" data-go="capacity">
+      <div class="nc-label">03 — Finance partnership</div>
+      <div class="nc-title">Capacity Planner <span class="arrow">→</span></div>
+      <div class="nc-desc">A working model that translates approved headcount into burn, capacity, and a defensible close date. Live inputs, live outputs, with the production system referenced.</div>
+    </div>
+    <div class="nav-card" data-go="brand">
+      <div class="nc-label">04 — Top of funnel</div>
+      <div class="nc-title">Employer Brand <span class="arrow">→</span></div>
+      <div class="nc-desc">Four pillars. The thrives/struggles filter. The hiring bar treated as the brand — because every compromise on a hire is a brand event.</div>
+    </div>
+    <div class="nav-card" data-go="overview">
+      <div class="nc-label">05 — Index</div>
+      <div class="nc-title">This page <span class="arrow">→</span></div>
+      <div class="nc-desc">Hero, philosophy, the rest of the document. Use the nav at the top to jump anywhere; everything's a single read.</div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top: 56px;">Operating philosophy</div>
+  <div class="callout">
+    <p>Most early People functions get built around traditional HR leadership — heavily policy-oriented, generalist, and reactive. This plan inverts that on purpose. The Head of People here is an operator, not a culture ambassador or policy owner. Their job is to embed with functional leaders, understand how each part of Ivo works, surface what's slowing teams down, and direct the People team to build the systems, processes, and programs that remove those constraints.</p>
+    <p>The bar is the brand. Every compromise on a hire is a brand event — not just an HR event. It signals to the existing team what the real standard is, regardless of what the careers page says. Ivo grows from 60 to 180 in 2026; that's roughly 120 net-new hires, on top of any backfills. The function below exists to deliver that volume <em>without</em> diluting what people came for.</p>
+  </div>
+
+  <div class="text-block">
+    <p>A note on what's not in here. Standalone DEI hires, an L&amp;D platform decision, a culture survey vendor pick. Those are downstream of the foundation, and adding programs the system can't yet support is how People functions lose credibility before they earn it. The 12-week plan focuses on listening before fixing, the team build on infrastructure before execution, and the brand work on consistency before reach.</p>
+  </div>
+</section>
+
+<!-- ============== 12-WEEK PLAN ============== -->
+<section class="section" id="plan">
+  <div class="section-label">02 — 12-week plan</div>
+  <h2>Listen for two weeks. Build for six. <em>Harden</em> the last four.</h2>
+  <p class="lede">Two root problems to solve at the same time: low top-of-funnel volume and an interview process that runs too long. Every action across all twelve weeks gets filtered through one lens — what does Ivo need to hit the year-end hiring plan, and how does TA operate as a true business partner to make that happen.</p>
+
+  <div class="metrics">
+    <div class="metric">
+      <div class="metric-value">5</div>
+      <div class="metric-label">Strategic goals</div>
+      <div class="metric-sub">All twelve weeks ladder up</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">12</div>
+      <div class="metric-label">Weeks</div>
+      <div class="metric-sub">Three phases</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">W3</div>
+      <div class="metric-label">Active recruiting begins</div>
+      <div class="metric-sub">TA reqs go live</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">W6</div>
+      <div class="metric-label">First plan projection</div>
+      <div class="metric-sub">Course-correct early</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>Five strategic goals hold the plan together. Hit the year-end hiring plan to support sales targets. Reduce time-to-hire through process discipline and HM alignment. Strengthen employer brand and improve top-of-funnel volume. Improve candidate experience from offer signature through day one. Give leadership real-time visibility into funnel health and hiring performance.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="accordion open">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-eyebrow">Phase 1 · Weeks 1–2</div>
+        <div class="ah-title">Listen, diagnose &amp; prioritize.</div>
+        <div class="ah-sub">Understand the business before making a single decision. Click any week to see the execution.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p style="font-size: 14px;">Every action gets filtered through what the business actually needs, not what TA assumes it needs. The output of Phase 1 is a stack-ranked role list pressure-tested with the CEO and a headcount proposal submitted for approval — not a finished plan, but enough signal to move on Week 3.</p>
+
+      <div class="weeks-list">
+        <div class="acc-nested accordion">
+          <div class="accordion-head">
+            <div class="ah-left">
+              <div class="ah-title">Week 1 — stakeholder listening tour</div>
+              <div class="ah-sub">Stakeholder sessions, sourcing diagnostic, CEO pressure test.</div>
+            </div>
+            <div class="accordion-chevron">▼</div>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>Stakeholder meetings with every functional leader. Same five questions: org vision now and EOY; top 3 team priorities; material business impact of each open role; where the team is performing well; where the gaps are creating drag.</li>
+              <li>After each session: source 5–8 diverse candidates against the prioritized roles. Diagnostic, not delivery — surface preference patterns, blind spots, what HMs respond to vs. what they say they want.</li>
+              <li>Alignment meeting with the CEO. Frame everything in time, cost, risk, velocity — every stakeholder you've spoken to is reading the same room from a different angle, and the CEO is the integrator.</li>
+              <li>Stack-rank open roles using three lenses: business priority, current team strain, future direction.</li>
+              <li>Take the prioritized stack to the CEO. Not for approval — for a pressure test of the logic and an alignment on talent philosophy.</li>
+              <li>Deliverables: stakeholder insights summary (one page per team), role prioritization stack rank, bias and preference profile by team, themes across sessions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="acc-nested accordion">
+          <div class="accordion-head">
+            <div class="ah-left">
+              <div class="ah-title">Week 2 — mapping &amp; viability + headcount proposal</div>
+              <div class="ah-sub">Translate priorities into a realistic execution plan. Submit the headcount proposal by Friday.</div>
+            </div>
+            <div class="accordion-chevron">▼</div>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>Role mapping: geographic breakdown, department and seniority distribution, which roles need programs (university, events, sourcing campaigns).</li>
+              <li>Market viability deep dive: pull historical TTH from Ashby for comparable roles; benchmark goals against what's actually achievable. Flag unrealistic goals early — not in month five when it's too late to recover.</li>
+              <li>Tech stack audit: tool spend vs. ROI, where hires are actually coming from, where automation can reduce administrative burden.</li>
+              <li>Capacity planning model: based on projected role load, role type, and department complexity — how many TA team members are actually required.</li>
+              <li>Headcount proposal + org chart submitted for approval by end of Week 2. Grounded in the role map and capacity model, not assumptions. TA team reqs open Week 3.</li>
+              <li>Guiding principle: minimum viable operations first. Stability before optimization.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-eyebrow">Phase 2 · Weeks 3–8</div>
+        <div class="ah-title">Build, fix &amp; activate.</div>
+        <div class="ah-sub">Active recruiting begins. Process gets observed, then improved. Brand work goes live.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p style="font-size: 14px;">By Week 6 leadership has visibility every Monday morning. By Week 8 the brand strategy is live. Phase 2 is six weeks of operating-mode TA — running pipeline, fixing what's broken, and shipping the infrastructure that lets the function scale past one operator.</p>
+      <div class="weeks-list">
+        <div class="acc-nested accordion">
+          <div class="accordion-head">
+            <div class="ah-left">
+              <div class="ah-title">Week 3 — active recruiting + TA hiring opens</div>
+              <div class="ah-sub">Reqs go live. Process observed, not changed yet.</div>
+            </div>
+            <div class="accordion-chevron">▼</div>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>TA team reqs live. Active sourcing begins in parallel with open business roles. Target: offers extended weeks 5–6, starts week 7.</li>
+              <li>Process assessment: meet with the existing TA team to understand suspected bottlenecks; independently observe candidate flow end-to-end for both technical and GTM loops.</li>
+              <li>Light HM brief before HMs interview this week — what's expected, how to give structured feedback, SLA for turnaround. Not full enablement (that's Week 7), just table stakes.</li>
+              <li>Recruiter enablement v1 begins: process documentation, company pitch training, comp/equity training, hiring philosophy, do's and don'ts.</li>
+              <li>Deliverables: TA reqs live; process map for tech and GTM; friction log (observations, not proposals); recruiter enablement v1 underway.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-nested accordion">
+          <div class="accordion-head">
+            <div class="ah-left">
+              <div class="ah-title">Week 4 — sourcing intelligence + brand activation</div>
+              <div class="ah-sub">Stop fishing in the wrong ponds. Make the company visible where target talent actually lives.</div>
+            </div>
+            <div class="accordion-chevron">▼</div>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>Sourcing audit: what candidates are saying about us, where the talent we want lives, what we're getting vs. what we need.</li>
+              <li>Talent mapping: build sourcing bank by company, community, event. For high-priority roles, identify alum networks and online communities aligned with team direction.</li>
+              <li>For meetup groups: scrub the full attendee list, connect on LinkedIn, work toward attending or hosting an event within two weeks.</li>
+              <li>Launch LinkedIn posting cadence. A/B test outreach messages — subject framing, role positioning, mission vs. growth vs. comp angles.</li>
+              <li>Deliverables: sourcing intelligence brief, talent map, event activation plan (next 4 weeks), posting cadence launched, A/B variants live.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-nested accordion">
+          <div class="accordion-head">
+            <div class="ah-left">
+              <div class="ah-title">Week 5 — offer &amp; pre-boarding audit</div>
+              <div class="ah-sub">The space between offer signature and Day 1 is where companies lose people without knowing it.</div>
+            </div>
+            <div class="accordion-chevron">▼</div>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>Deep-dive the offer extension workflow — what's the experience from verbal to signature?</li>
+              <li>Where can we automate and streamline without making it feel transactional?</li>
+              <li>Build pre-start engagement playbook v1: swag one week before start, invite to relevant team events, slow-drip welcome messages, structured check-ins from recruiter and HM.</li>
+              <li>Goal: by Day 1, new hires already feel like part of the team.</li>
+              <li>Deliverables: offer + pre-boarding gap analysis, pre-start engagement playbook v1, automation map, proposal for structural changes needing leadership sign-off.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-nested accordion">
+          <div class="accordion-head">
+            <div class="ah-left">
+              <div class="ah-title">Week 6 — dashboards, SHP tracker, first plan projection</div>
+              <div class="ah-sub">Course correct early. Surface trajectory before it becomes a crisis.</div>
+            </div>
+            <div class="accordion-chevron">▼</div>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>Monthly leadership hiring review cadence launched: metrics, tracking vs. plan, role adjustments, headcount changes. All decisions transcribed and followed up via email.</li>
+              <li>Ashby dashboards live for HMs (org-level), the exec team (company-wide), and CEO (high-level mapped to business goals).</li>
+              <li>SHP (Stakeholder Hiring Plan) Tracker built — prioritization and SLAs by priority, visible to TA, hiring teams, and HMs. Progress bars on documentation completion. Real-time visibility into where slowdowns sit.</li>
+              <li>First hiring plan projection: at current velocity, where do we land by EOY? Surface the gap in the first leadership review — not month 11.</li>
+              <li>TA team offers extended (target: 30–40% of function).</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-nested accordion">
+          <div class="accordion-head">
+            <div class="ah-left">
+              <div class="ah-title">Week 7 — TA partner onboarding + HM enablement audit</div>
+              <div class="ah-sub">Ramp new TA partners fast. Audit HM enablement before gaps become a bottleneck at scale.</div>
+            </div>
+            <div class="accordion-chevron">▼</div>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>TA partner onboarding: Day 1 orientation, tools access, hiring philosophy. Days 2–3, meetings with HMs and stakeholders. End of week, actively sourcing on prioritized roles.</li>
+              <li>HM enablement audit: where does the current onboarding for HMs work, where do things slip? No HM should be unclear on what's expected of them or when.</li>
+              <li>Build HM master checklist — zero gaps first, optimization later.</li>
+              <li>SCALE framework applied to all process design: Signal through real work, Compounding teams, AI-enabled, Leverages judgment, Elevates the work and team.</li>
+              <li>Deliverables: TA onboarding executed, new partners sourcing, HM gap analysis, HM master checklist v1, proposal for HM improvements.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-nested accordion">
+          <div class="accordion-head">
+            <div class="ah-left">
+              <div class="ah-title">Week 8 — full employer brand strategy + ToF campaign</div>
+              <div class="ah-sub">You can't outrecruit a weak brand. Build the strategy that changes what candidates see and hear before they ever talk to a recruiter.</div>
+            </div>
+            <div class="accordion-chevron">▼</div>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>Brand audit: pull 4 weeks of lightweight data, build full strategy, present to the CEO and Marketing leadership.</li>
+              <li>Three brand signals: what you say (content), what you do (process and decisions), what others say about you (Glassdoor, Built In, third-party).</li>
+              <li>Five content pillars: product velocity, team growth and culture, milestones, leadership thought leadership, career growth stories.</li>
+              <li>What we test: outreach message framing, content format (video vs. static vs. carousel), posting cadence, mission vs. growth vs. culture angle.</li>
+              <li>Decision: continue lightweight or escalate to a full marketing campaign in Month 5 based on traction.</li>
+              <li>Deliverables: brand audit, content strategy, posting calendar (weeks 9–12), brand metrics baseline, Built In/Glassdoor activation plan.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-eyebrow">Phase 3 · Weeks 9–12</div>
+        <div class="ah-title">Optimize, harden &amp; <em>scale.</em></div>
+        <div class="ah-sub">Tighten what six weeks of execution is telling us. Move from reactive to proactive talent engine.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p style="font-size: 14px;">The team is hired and ramping. By Week 12 the function should be operationally documented, the hiring plan reality-checked, and the year-end roadmap built. The Week-12 readout to the CEO isn't a status report — it's the partnership document that closes the 90-day window and opens the next twelve months.</p>
+      <div class="weeks-list">
+        <div class="acc-nested accordion">
+          <div class="accordion-head">
+            <div class="ah-left">
+              <div class="ah-title">Week 9 — process optimization + comp audit + TA performance</div>
+              <div class="ah-sub">Tighten process. Set the performance foundation for the team.</div>
+            </div>
+            <div class="accordion-chevron">▼</div>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>Process champions debrief: bring back two champions (one tech, one non-tech) for structured feedback. What worked, what still has friction, what candidates are saying. Finalize process changes on real signal, not theory.</li>
+              <li>Comp benchmarking audit: pull offer accept rate and decline reasons from Ashby, cross-reference market data for top tech and GTM roles. Frame to the CEO and CFO as a revenue and retention conversation, not an HR ask.</li>
+              <li>Set individual TA KPIs: pipeline volume, screens, submittals/week, time-to-submit, accept rate. Establish 1:1 cadence — weekly operational, monthly coaching.</li>
+              <li>Build shared team dashboard — transparency creates accountability without micromanagement.</li>
+              <li>First funnel conversion review (tech vs. GTM separated). Identify top 2 conversion problems and build a fix for each.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-nested accordion">
+          <div class="accordion-head">
+            <div class="ah-left">
+              <div class="ah-title">Week 10 — programs assessment + referral launch</div>
+              <div class="ah-sub">Move from reactive to a proactive talent engine. Prioritize programs by business need, readiness, and ROI timeline.</div>
+            </div>
+            <div class="accordion-chevron">▼</div>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>Programs assessment delivered to the CEO with timeline benchmarking: Referral Program (now), Silver Medalist Re-engagement (Month 4–5), Diversity Sourcing (Month 5–6), University/Early Career (Month 6–9), Full Brand Campaign (Month 5–6 if traction confirmed).</li>
+              <li>Referral program launch: simple, high-trust structure, bonus tied to seniority, paid at 90-day retention milestone. Promote via Slack, all-hands, and 1:1 asks during team check-ins.</li>
+              <li>Silver medalist re-engagement cadence built — warm, vetted candidates who almost made it. Low cost, high close rate.</li>
+              <li>Brand traction check: pull 6-week brand metrics — InMail response, follower growth, post engagement, Glassdoor trend, applicant source quality. Decision point — continue lightweight or escalate.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-nested accordion">
+          <div class="accordion-head">
+            <div class="ah-left">
+              <div class="ah-title">Week 11 — hiring plan reality check + ToF deep dive</div>
+              <div class="ah-sub">Map landing position by department. Surface gaps with levers, not opinions.</div>
+            </div>
+            <div class="accordion-chevron">▼</div>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>Hiring plan reality check: hires made, roles in final stages, roles with strong pipelines, roles stalled. Project at current velocity by department — tech and GTM will land differently. If there's a gap, surface it with a clear plan and recommended levers.</li>
+              <li>Top-of-funnel deep dive: is volume improving? Track InMail response trends, apply rates, inbound vs. outbound week over week. If still low, diagnose whether issue is message, channel, role positioning, or comp.</li>
+              <li>HM accountability — data-led: pull SHP tracker data. Which hiring teams have completed documentation on time? Which create delays? Bring patterns to the exec team with data, not opinions.</li>
+              <li>TA team health check: are KPIs being hit, where does coaching need to happen, are partners blocked on something systemic, is workload distributed appropriately?</li>
+            </ul>
+          </div>
+        </div>
+        <div class="acc-nested accordion">
+          <div class="accordion-head">
+            <div class="ah-left">
+              <div class="ah-title">Week 12 — operational documentation + year-end roadmap</div>
+              <div class="ah-sub">Close the 90-day window. Open the next twelve months with a forward-looking partnership document.</div>
+            </div>
+            <div class="accordion-chevron">▼</div>
+          </div>
+          <div class="accordion-body">
+            <ul>
+              <li>Operational documentation audit: every process, playbook, workflow built over 12 weeks is documented, accessible, owned. No single points of failure — if anyone is out for two weeks, the team executes cleanly.</li>
+              <li>Year-end roadmap: month-by-month plan to hit the hiring plan. Account for seasonal slowdowns (holiday pipeline drag), offer decline risk on late-stage candidates, ramp time for hires made in months 4–5, programs coming online in months 5–6.</li>
+              <li>CEO alignment session: what worked, what still needs investment, what decisions need to happen in the next 30 days to protect year-end outcomes. Align priorities for months 4–6.</li>
+              <li>TA function retrospective (internal): what's working, what's creating friction, what does the team need to do their best work? Builds trust and surfaces problems early.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ORG & TEAM BUILD ============== -->
+<section class="section" id="org">
+  <div class="section-label">03 — Org &amp; team build</div>
+  <h2>Head of People at the top. <em>Two directors</em>, clean ownership lanes.</h2>
+  <p class="lede">The org chart, the phased headcount, and the incentive structure are one decision, not three. The shape below is intentional — an operator at the top, distinct accountable lanes for pre-Day-1 (Talent) and post-Day-1 (HR Ops), and time-boxed surge capacity to hit the EOY number without the function carrying that volume permanently.</p>
+
+  <div class="callout">
+    <p>Ten FTE plus three RPO contractors. Total of thirteen seats across three phases, sized so leadership and infrastructure land before execution capacity. Ivo's growth from 60 to 180 in 2026 puts the bulk of the hiring volume in the back half of the year — Phase 1 hires below are non-negotiable for the EOY plan; Phase 2 and 3 are the difference between scaling cleanly and scaling expensively.</p>
+  </div>
+
+  <div class="metrics">
+    <div class="metric">
+      <div class="metric-value">13</div>
+      <div class="metric-label">Total seats</div>
+      <div class="metric-sub">10 FTE + 3 RPO</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">6</div>
+      <div class="metric-label">Phase 1</div>
+      <div class="metric-sub">3 leadership + 3 RPO</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">3</div>
+      <div class="metric-label">Phase 2</div>
+      <div class="metric-sub">Senior recruiters + ops</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">4</div>
+      <div class="metric-label">Phase 3</div>
+      <div class="metric-sub">Sourcing, brand, generalist</div>
+    </div>
+  </div>
+
+  <div class="org-chart">
+    <!-- CEO ghost (reporting line only) -->
+    <div class="org-row-top">
+      <div class="node node-ghost">CEO <span class="node-ghost-tag">(reporting line)</span></div>
+    </div>
+    <div class="org-line-down"></div>
+
+    <!-- Head of People -->
+    <div class="org-row-top">
+      <div class="node node-cpo">Head of People<span class="node-sub">Operations &amp; Systems Builder</span></div>
+    </div>
+    <div class="org-line-down"></div>
+
+    <!-- Two pillars: HR Ops + Talent -->
+    <div class="org-pillars-2">
+      <div class="org-pillar org-pillar-hro">
+        <div class="node node-pillar node-hro">Head of HR Operations<span class="node-sub-quiet">Post-hire lifecycle</span></div>
+      </div>
+      <div class="org-pillar org-pillar-tal">
+        <div class="node node-pillar node-dot">Director of Talent<span class="node-sub-quiet">Brand → start date</span></div>
+        <div class="org-talent-subs">
+          <div class="org-tg">
+            <div class="tg-label">Recruiting</div>
+            <div class="node node-ic">Sr. Tech Recruiter</div>
+            <div class="node node-ic">Sr. Business Recruiter</div>
+            <div class="node node-ic">Jr. Generalist Recruiter</div>
+          </div>
+          <div class="org-tg">
+            <div class="tg-label">Sourcing</div>
+            <div class="node node-ic">Technical Sourcer</div>
+            <div class="node node-ic">Non-Technical Sourcer</div>
+          </div>
+          <div class="org-tg">
+            <div class="tg-label">Ops &amp; Brand</div>
+            <div class="node node-ic">Talent Ops &amp; Coord</div>
+            <div class="node node-ic">Jr. Employer Brand</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RPO contractors (dashed line to Director of Talent) -->
+    <div class="org-rpo-section">
+      <div class="org-rpo-label">RPO contract — 6-month EOY sprint, dotted line to Director of Talent</div>
+      <div class="org-rpo-grid">
+        <div class="node node-rpo">RPO Tech Recruiter</div>
+        <div class="node node-rpo">RPO Business Recruiter</div>
+        <div class="node node-rpo">RPO Generalist Recruiter</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="org-foot">
+      Total team — 10 FTE + 3 RPO contract · RPO contingent sunsets at EOY hiring goal attainment
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">Design principles</div>
+        <div class="ah-sub">Why this shape, not a different one.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p><strong>Head of People as operator, not policy owner.</strong> Most early People functions get built around traditional HR leadership — heavily policy-oriented, generalist, reactive. This plan inverts that. The Head of People here is an operator and systems builder. They embed with functional leaders, surface what's slowing teams down, and direct the team to build the systems that remove those constraints. Not a culture ambassador or a benefits broker.</p>
+      <p><strong>Two directors, clean ownership lanes.</strong> HR Operations owns everything after someone signs an offer — onboarding, HRIS, benefits, performance, offboarding. The Director of Talent owns everything before Day 1 — brand, sourcing, recruiting, candidate experience. This separation prevents the overlap and confusion that plagues early People teams when "talent" and "people" share scope.</p>
+      <p><strong>Flat by design through the EOY number.</strong> Adding layers before they're necessary is the most expensive mistake a People function can make. The Head of People has two direct reports; the Director of Talent has seven. The shape revisits at ~220 employees — until then, additional hierarchy buys structure without buying output.</p>
+      <p><strong>RPO embedded, not contracted.</strong> The three RPO recruiters operate inside the ATS, attend team syncs, and report to the Director of Talent for day-to-day work. They're held to the same performance standards as internal recruiters, with weekly pipeline reviews on the same cadence. Contract includes a wind-down clause at goal attainment — they sunset when the job is done, not on a calendar.</p>
+      <p><strong>DEI is not a siloed role at this stage.</strong> It's an accountability across hiring, comp, and promotion — owned by the Heads of HR Ops and Talent with cross-functional partnership. A dedicated DEI hire before the system can support the work creates a target for blame without authority to fix anything. This decision gets revisited at 250 employees.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">Capacity ratios &amp; trigger points</div>
+        <div class="ah-sub">When the ratios break, what to look for before they do.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p><strong>Recruiter capacity per recruiter.</strong> The Sr. Tech and Sr. Business Recruiters each carry 12–14 active reqs at any given time. Above that, time-in-stage starts creeping past five days at every step and offer accept rates drift down by 5–10 points without a clean comp explanation. Early warning: time-to-fill rising past 45 days on tiers where the historical average is below that; recruiters stop doing the small follow-ups that move candidates forward.</p>
+      <p><strong>Sourcer to recruiter ratio.</strong> Roughly 1 sourcer per 1 senior recruiter at our role mix. The Technical Sourcer pairs with the Sr. Tech Recruiter; the Non-Technical Sourcer pairs with the Sr. Business Recruiter. If sourcing is shipping fewer than 8–10 qualified passive candidates per recruiter per week by Phase 3, the binding constraint is messaging or channel mix — adding sourcer headcount won't fix it.</p>
+      <p><strong>HR Operations.</strong> One Head of HR Ops covers the post-Day-1 lifecycle through ~120 employees. Past that, the role needs a backstop — typically an HR Generalist or HR Ops Specialist — to handle ticket triage, onboarding execution, and vendor coordination. Trigger: company headcount hits 130, payroll error rate climbs above 0.5%, or onboarding NPS drops below 70. Any one is a yellow flag.</p>
+      <p><strong>RPO sunset.</strong> The three RPO contractors are budgeted for six months. Trigger to wind down: EOY hire goal hit, or sustained internal capacity above demand for two consecutive months. The contract includes a 30-day wind-down clause; we don't carry RPO into the next year unless the hiring plan demands it.</p>
+    </div>
+  </div>
+
+  <!-- PHASED HEADCOUNT TABLE -->
+  <div class="section-divider">
+    <div class="section-label">Phased headcount</div>
+    <h3>The team in detail. <em>Phase by phase</em>, role by role.</h3>
+    <p style="font-size: 15.5px; max-width: 700px; margin-top: 14px;">The same thirteen seats from the chart above, broken out with reporting lines, phase, mandate, and the specific business risk each role retires. Phase 1 lands in months 1–2, Phase 2 in months 2–3, Phase 3 across months 3–5+.</p>
+  </div>
+
+  <table class="tbl">
+    <thead>
+      <tr>
+        <th style="width: 24%;">Role</th>
+        <th style="width: 10%;">Phase</th>
+        <th style="width: 16%;">Reports to</th>
+        <th style="width: 50%;">Mandate &amp; priority rationale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="role-name">Head of People</td>
+        <td><span class="badge badge-w1">Phase 1</span></td>
+        <td>CEO</td>
+        <td>Operator and systems builder, not policy owner. Embeds with functional leaders, triages priorities, directs the team to build infrastructure. Phase 1 because nothing downstream is real until this hire is in seat.</td>
+      </tr>
+      <tr>
+        <td class="role-name">Head of HR Operations</td>
+        <td><span class="badge badge-w1">Phase 1</span></td>
+        <td>Head of People</td>
+        <td>Owns the full post-hire lifecycle — onboarding, HRIS, benefits, payroll, compliance, performance cycles, offboarding. Sixty employees with no clean owner of any of this; the back office can't scale on goodwill alone.</td>
+      </tr>
+      <tr>
+        <td class="role-name">Director of Talent</td>
+        <td><span class="badge badge-w1">Phase 1</span></td>
+        <td>Head of People</td>
+        <td>Owns the full pre-Day-1 lifecycle — employer brand, sourcing, recruiting, candidate experience, offer close. Leads the seven-IC Talent team and manages the three embedded RPO contractors during the EOY sprint.</td>
+      </tr>
+      <tr>
+        <td class="role-name">RPO Tech Recruiter</td>
+        <td><span class="badge badge-w1">Phase 1</span></td>
+        <td>Director of Talent · contract</td>
+        <td>Embedded contract recruiter handling overflow technical reqs beyond the Sr. Tech Recruiter's capacity. Operates inside the ATS, follows the same standards as internal team. Sunsets at EOY goal attainment, not on a calendar.</td>
+      </tr>
+      <tr>
+        <td class="role-name">RPO Business Recruiter</td>
+        <td><span class="badge badge-w1">Phase 1</span></td>
+        <td>Director of Talent · contract</td>
+        <td>Same shape, applied to GTM and G&amp;A. Volume role for the H2 push — Sales, Marketing, and operational roles where pipeline pressure is highest.</td>
+      </tr>
+      <tr>
+        <td class="role-name">RPO Generalist Recruiter</td>
+        <td><span class="badge badge-w1">Phase 1</span></td>
+        <td>Director of Talent · contract</td>
+        <td>Flex contract recruiter deployed wherever pipeline pressure is highest — junior, high-volume, or time-sensitive reqs across both desks as directed by the Director of Talent.</td>
+      </tr>
+      <tr>
+        <td class="role-name">Sr. Technical Recruiter</td>
+        <td><span class="badge badge-w2">Phase 2</span></td>
+        <td>Director of Talent</td>
+        <td>Full-cycle on Engineering, Data, and technical Product. 12–14 active reqs at a time; primary relationship with engineering leadership. Phase 2 because they need an org and a process to plug into — Phase 1 builds those.</td>
+      </tr>
+      <tr>
+        <td class="role-name">Sr. Business Recruiter</td>
+        <td><span class="badge badge-w2">Phase 2</span></td>
+        <td>Director of Talent</td>
+        <td>Full-cycle across Sales, Marketing, Finance, Ops, and G&amp;A. 12–14 active reqs across multiple functions and levels. Same Phase 2 logic — needs the operating model in place before they can run inside it.</td>
+      </tr>
+      <tr>
+        <td class="role-name">Talent Ops &amp; Coordination Specialist</td>
+        <td><span class="badge badge-w2">Phase 2</span></td>
+        <td>Director of Talent</td>
+        <td>Operational backbone of the recruiting function — scheduling, ATS hygiene, candidate comms, offer logistics, weekly metrics. Phase 2 because once two senior recruiters are running 12–14 reqs each, coordination is the bottleneck if no one owns it.</td>
+      </tr>
+      <tr>
+        <td class="role-name">Technical Sourcer</td>
+        <td><span class="badge badge-w3">Phase 3</span></td>
+        <td>Director of Talent</td>
+        <td>Continuous passive technical pipeline — LinkedIn, GitHub, niche communities. Phase 3 because the Sr. Tech Recruiter can survive without dedicated sourcing for the first three months; past that, sourcing capacity is the next constraint.</td>
+      </tr>
+      <tr>
+        <td class="role-name">Non-Technical Sourcer</td>
+        <td><span class="badge badge-w3">Phase 3</span></td>
+        <td>Director of Talent</td>
+        <td>Same logic, applied to GTM/G&amp;A pipelines. Phase 3 because Business Recruiter capacity binds first; sourcing is the next constraint after that.</td>
+      </tr>
+      <tr>
+        <td class="role-name">Jr. Employer Brand &amp; Marketing Specialist</td>
+        <td><span class="badge badge-w3">Phase 3</span></td>
+        <td>Director of Talent</td>
+        <td>Day-to-day execution of the employer brand strategy — content calendar, LinkedIn, Glassdoor, employee spotlights. Phase 3 because the strategy needs to exist before someone executes against it; the Director of Talent owns the strategy in Phase 1–2.</td>
+      </tr>
+      <tr>
+        <td class="role-name">Jr. Generalist Recruiter</td>
+        <td><span class="badge badge-w3">Phase 3</span></td>
+        <td>Director of Talent</td>
+        <td>Phone screens, pipeline coordination, and assigned reqs across both desks. A training role with a clear path to senior recruiting. The latest Phase 3 hire — added when the senior recruiters are at capacity and the coordination load is owned.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">Sequencing logic</div>
+        <div class="ah-sub">Why this order, not a different one.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p>Phase 1 lands leadership and surge capacity simultaneously. The Head of People sets direction, the Head of HR Ops takes the back-office load off the company, and the Director of Talent stands up the function that the three embedded RPO contractors plug into on day one. The RPO contingent is not a "let's see if we need it" decision — it's the only realistic path to absorbing H2 hiring volume while internal recruiters are still being hired.</p>
+      <p>Phase 2 is the senior IC layer. Two full-cycle recruiters and the Talent Ops Specialist who keeps them functional. The point of Phase 2 is to start replacing RPO output with internal capacity — not because RPO is bad, but because $4k–$6k per hire in fees is meaningful spend on recurring volume.</p>
+      <p>Phase 3 is the compounding layer: sourcing, employer brand execution, and the junior generalist recruiter. These roles compound over six to twelve months, not three, so they're sequenced for when the operating model can absorb them. Adding them earlier produces less output than later, because there's no functional system for them to plug into yet.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">If budget compresses</div>
+        <div class="ah-sub">Specific trade-offs, not vague flexibility.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p><strong>If we lose the Jr. Generalist Recruiter:</strong> the senior recruiters absorb screening volume and the coordination load increases marginally. Acceptable. Reopen the role in Q1 of the following year if attrition or growth accelerates.</p>
+      <p><strong>If we lose one of the sourcers:</strong> keep the Technical Sourcer; non-tech sourcing can run on RPO + Sr. Business Recruiter through year-end. Cost: a temporary CPH bump on GTM hires that recovers when sourcing comes back online.</p>
+      <p><strong>If we lose the Jr. Employer Brand role:</strong> the strategy still exists (Director of Talent owns it), but execution stalls. LinkedIn cadence drops, Glassdoor ages out, content calendar becomes aspirational. Recoverable in two quarters but the brand drag shows up in offer accept rates first.</p>
+      <p><strong>If we lose Talent Ops &amp; Coord:</strong> the senior recruiters get pulled into scheduling and ATS hygiene, which is the worst use of their time at the worst possible moment. This is the role I'd fight to keep above almost any other Phase 2/3 hire.</p>
+      <p><strong>What I won't accept cutting:</strong> any of Phase 1, including the RPO contingent. The math on the EOY number doesn't work without that surge capacity, and the leadership trio either lands together or the function can't be staged from anywhere.</p>
+    </div>
+  </div>
+
+  <!-- INCENTIVE ARCHITECTURE -->
+  <div class="section-divider">
+    <div class="section-label">Incentive architecture</div>
+    <h3>A one-time TA bonus tied to the <em>annual hiring goal</em>.</h3>
+    <p style="font-size: 15.5px; max-width: 700px; margin-top: 14px;">This is the Talent-specific incentive plan tied to the 100-hire annual goal — a shared team pool with weighted hire points, an individual quality multiplier, and a separate per-hire structure for sourcers. One-time, non-recurring, and explicitly not a precedent for future periods.</p>
+  </div>
+
+  <div class="metrics">
+    <div class="metric">
+      <div class="metric-value">100</div>
+      <div class="metric-label">Trigger</div>
+      <div class="metric-sub">Hires by Dec 31</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">$200–300k</div>
+      <div class="metric-label">Pool size</div>
+      <div class="metric-sub">~$2–3k per hire</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">0.50–1.25×</div>
+      <div class="metric-label">Multiplier</div>
+      <div class="metric-sub">Individual quality</div>
+    </div>
+    <div class="metric">
+      <div class="metric-value">Jan 31</div>
+      <div class="metric-label">Payout date</div>
+      <div class="metric-sub">Next regular payroll</div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">Plan philosophy &amp; trigger</div>
+        <div class="ah-sub">Why a shared pool, why the binary 100-hire trigger.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p><strong>Shared pool, not individual commission.</strong> Every recruiter has a stake in every other recruiter's success. The team wins together or not at all. Individual commission designs reward closing your own reqs at the expense of helping a teammate close a harder one — a team pool inverts that incentive. It also reduces pressure to push borderline candidates over the line just to claim the close.</p>
+      <p><strong>Binary trigger: 100 hires or no payout.</strong> Partial achievement does not unlock anything. Ninety-eight is not ninety-eight percent. This is unusual but intentional — it keeps the December close from becoming a panic, because the team knows the line is the line and acts accordingly all year. A "started" definition (offer signed and candidate started) means the trigger reflects real outcomes, not December offer-letter-stuffing.</p>
+      <p><strong>One-time and non-recurring.</strong> Does not establish a comp precedent. Won't be referenced in offer letters, employment agreements, or future reviews. Leadership retains full discretion over whether to run a similar program in any future period.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">Hire weighting &amp; payout formula</div>
+        <div class="ah-sub">Not all hires carry equal complexity. The point system reflects market difficulty.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p style="font-size: 14px;">Senior tech roles demand deeper sourcing, longer cycles, and specialized evaluation. The weighting below reflects that — and crucially, all classifications are locked at req open. Retroactive changes to inflate point value are not permitted.</p>
+      <table class="tbl" style="margin: 16px 0;">
+        <thead>
+          <tr>
+            <th style="width: 32%;">Role type</th>
+            <th style="width: 26%;">Functions</th>
+            <th style="width: 18%;">Points</th>
+            <th style="width: 24%;">Rationale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="role-name">Junior Non-Tech</td>
+            <td>Business, Ops, Admin, G&amp;A</td>
+            <td><span class="badge badge-quiet">1.0 pts</span></td>
+            <td>Base unit</td>
+          </tr>
+          <tr>
+            <td class="role-name">Senior Non-Tech</td>
+            <td>Business, Ops, Admin, G&amp;A</td>
+            <td><span class="badge badge-w2">1.5 pts</span></td>
+            <td>1.5× base</td>
+          </tr>
+          <tr>
+            <td class="role-name">Junior Tech</td>
+            <td>Eng, Data, Product, Design</td>
+            <td><span class="badge badge-w2">1.5 pts</span></td>
+            <td>Equal to Sr. Non-Tech</td>
+          </tr>
+          <tr>
+            <td class="role-name">Senior Tech</td>
+            <td>Eng, Data, Product, Design</td>
+            <td><span class="badge badge-w1">3.0 pts</span></td>
+            <td>3× base · highest weight</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Payout formula.</strong> Recruiter Points = Σ (Closed Hires × Role Weight) − Deduction Events. Raw Share = (Recruiter Points ÷ Team Total Points) × Total Pool. Adjusted Payout = Raw Share × Individual Multiplier. If aggregate multiplier-adjusted payouts exceed the approved pool ceiling, all individual payouts are scaled down pro-rata. Total disbursement never exceeds the pool.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">Individual quality multiplier</div>
+        <div class="ah-sub">0.50× to 1.25×, derived from a six-criteria composite.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p style="font-size: 14px;">Composite score is the weighted average of four additive criteria, then reduced by 0.10 for each deduction event, floored at zero.</p>
+      <div style="margin: 14px 0;">
+        <div class="fill-row">
+          <div class="fill-label">HM satisfaction</div>
+          <div class="fill-track"><div class="fill-bar" style="width: 30%;"></div></div>
+          <div class="fill-pct">30%</div>
+        </div>
+        <div class="fill-row">
+          <div class="fill-label">Slate quality</div>
+          <div class="fill-track"><div class="fill-bar" style="width: 25%;"></div></div>
+          <div class="fill-pct">25%</div>
+        </div>
+        <div class="fill-row">
+          <div class="fill-label">Process speed</div>
+          <div class="fill-track"><div class="fill-bar" style="width: 20%;"></div></div>
+          <div class="fill-pct">20%</div>
+        </div>
+        <div class="fill-row">
+          <div class="fill-label">Collaboration</div>
+          <div class="fill-track"><div class="fill-bar" style="width: 25%;"></div></div>
+          <div class="fill-pct">25%</div>
+        </div>
+      </div>
+      <p style="font-size: 14px; margin-top: 14px;"><strong>Deductions:</strong> −0.10 per reneged offer (accepted then withdrawn before start), −0.10 per non-PIP attrition before EOY. Both attribute to the closing recruiter and reflect on hiring judgment, not just velocity.</p>
+      <p style="font-size: 14px;"><strong>Multiplier scale:</strong> Composite &lt;2.5 → 0.50× · 2.5–3.2 → 0.75× · 3.3–3.9 → 1.00× · 4.0–4.5 → 1.15× · 4.6–5.0 → 1.25×. Surveys auto-trigger via Ashby within five business days of each new hire's start date; surveys not completed in ten days are excluded from that req's score.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">Sourcer structure (separate pool)</div>
+        <div class="ah-sub">Per-hire flat bonus by tier, multiplied by the same individual quality score.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p style="font-size: 14px;">Sourcers are not part of the recruiter shared pool. They earn a per-hire flat bonus that compounds with their individual quality multiplier. A hire is "sourcer-originated" only if the candidate first entered the pipeline through direct sourcer outreach (LinkedIn InMail, cold email, outbound campaign) and is documented in the ATS at pipeline entry. Referrals, inbound applicants, and re-engagement of previously declined candidates are not credited.</p>
+      <table class="tbl" style="margin: 16px 0;">
+        <thead>
+          <tr>
+            <th>Role type</th>
+            <th>Per-hire bonus</th>
+            <th>Multiplier applies</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="role-name">Junior Non-Tech</td><td>$200</td><td>Yes (0.50–1.25×)</td></tr>
+          <tr><td class="role-name">Senior Non-Tech</td><td>$350</td><td>Yes (0.50–1.25×)</td></tr>
+          <tr><td class="role-name">Junior Tech</td><td>$350</td><td>Yes (0.50–1.25×)</td></tr>
+          <tr><td class="role-name">Senior Tech</td><td>$750</td><td>Yes (0.50–1.25×)</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size: 14px;">Worked example: a sourcer with 20 originated Sr. Tech hires at a 1.25× multiplier earns $750 × 20 × 1.25 = $18,750, paid alongside the recruiter pool in late January. Same six-criteria scoring as recruiters, with deductions for reneged or attrited hires they originated.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">Guardrails &amp; non-precedent language</div>
+        <div class="ah-sub">Forfeiture, gaming protection, the company's reservation of rights.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p><strong>Active employment required at payout.</strong> Eligible participants must be active employees on January 31, 2026. Voluntary resignations forfeit unpaid bonus allocation. Standard practice; mentioned because some plans omit it and end up paying people who've already moved on.</p>
+      <p><strong>Hires rescinded by the company are excluded with no deduction.</strong> If a budget freeze or position elimination cancels an accepted offer, the recruiter is not penalized — the deduction structure is for hires the recruiter could have screened out, not for company decisions.</p>
+      <p><strong>Modification clause.</strong> The company reserves the right to modify or cancel the plan with 30 days' written notice if material business conditions change (hiring freeze, restructure). Gaming, manipulation, or misrepresentation of attribution, surveys, classifications, or pipeline records forfeits the entire bonus and may trigger disciplinary action.</p>
+      <p><strong>Final payout is discretionary,</strong> subject to CFO and CHRO approval, with written confirmation issued no later than January 15. The plan is confidential and not for distribution outside TA, HR leadership, and Finance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CAPACITY PLANNER ============== -->
+<section class="section" id="capacity">
+  <div class="section-label">05 — Capacity planner for finance</div>
+  <h2>Headcount approvals are abstract until <em>somebody translates them into burn.</em></h2>
+  <p class="lede">A working model that turns the headcount plan into the three numbers Finance actually needs: monthly burn, recruiter capacity, and a defensible close date. Below is the why, then how the inputs fit together, then the live prototype.</p>
+
+  <div class="text-block">
+    <p style="font-size: 16px; color: var(--ink-2); margin-bottom: 22px;">Finance cares about this model for four reasons. None of them are hypothetical.</p>
+    <ol class="steplist">
+      <li><strong>Runway translation.</strong> Headcount approvals don't show up in the cash forecast until somebody converts seats into a monthly number. The model does that conversion in one place, with the assumptions visible, so Finance isn't rebuilding it in a separate sheet.</li>
+      <li><strong>Hiring velocity risk.</strong> If Talent's stated capacity and Talent's actual capacity differ by ten hires, Finance is building a budget on the wrong assumption. Better to know in May than in October. The model surfaces the gap when it exists.</li>
+      <li><strong>People costs as percent of revenue.</strong> At what ARR milestone does the headcount plan stop being affordable? The model lets Finance and the Head of People have that conversation with numbers instead of feelings.</li>
+      <li><strong>Trade-off legibility.</strong> Delay a hire by a quarter, extend RPO, hire a contractor, open a role offshore — these are not values debates. They're number comparisons. Putting them in a shared model makes the comparison legible to everyone in the room.</li>
+    </ol>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">Input layer 1 — headcount plan</div>
+        <div class="ah-sub">Total approved headcount, broken down by department and quarter.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p><strong>What's in it.</strong> Approved headcount, segmented by function and target start quarter. Source-of-truth, not the wishlist. Anything that isn't in this layer doesn't exist for capacity purposes.</p>
+      <p><strong>Why it matters.</strong> The number that gets argued about in a planning meeting and the number that actually got approved are often different by Q2. This layer is the version of the truth Finance signed off on, and it's the version the model assumes. If a hire is happening that isn't in here, it's a process question, not a model question.</p>
+      <p><strong>Failure mode prevented.</strong> Hiring against verbal commitments that get walked back at the next budget review. If it's not in this layer, it's not protected.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">Input layer 2 — velocity and capacity</div>
+        <div class="ah-sub">Recruiter count, time-to-fill by tier, offer acceptance rate.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p><strong>What's in it.</strong> Recruiter headcount (FTE plus RPO), average time-to-fill segmented by role tier, and rolling-90-day offer acceptance rate. Three numbers, kept current by the recruiting ops cadence.</p>
+      <p><strong>Why it matters.</strong> Capacity is a function of cycle time and conversion, not headcount alone. Two recruiters at a 35-day TTF outproduce four recruiters at a 70-day TTF. If the constraint is process, adding recruiter headcount doesn't help — it spreads the same broken process across more people.</p>
+      <p><strong>Failure mode prevented.</strong> Adding recruiter headcount when the actual bottleneck is the comp band, the interview loop length, or the time-from-offer-to-accept. The model forces the diagnosis to happen before the spend.</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">Input layer 3 — loaded cost parameters</div>
+        <div class="ah-sub">Average base, benefits loading, equity refresh assumptions.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p><strong>What's in it.</strong> Average base salary by tier, benefits and tax loading percentage, annual equity refresh rate. The numbers Finance already maintains for the operating plan, surfaced here so the headcount math uses the same source.</p>
+      <p><strong>Why it matters.</strong> A hire is not a salary. It's a salary plus 25–32% in benefits, taxes, and equity dilution. Approving headcount on base alone is how Finance gets surprised in Q3 by a budget gap that wasn't in anyone's spreadsheet — because the spreadsheet was wrong by design.</p>
+      <p><strong>Failure mode prevented.</strong> Decisions made on base comp alone, then re-litigated when the loaded cost shows up.</p>
+    </div>
+  </div>
+
+  <div class="callout-warm">
+    This is an illustrative prototype. The production version sits on top of Ashby — pulls TTF by seniority tier, source channel mix, ramp-time modeling, recruiter specialization, and EOY confidence scoring against a Dec 16 target. The math below is directionally correct; the production system is calibrated to Ivo's actual hiring velocity.
+  </div>
+
+  <div class="planner">
+    <div class="planner-grid">
+      <div class="input-field">
+        <label>Total approved headcount</label>
+        <input type="number" id="i-hc" value="120" min="1" max="500">
+      </div>
+      <div class="input-field">
+        <label>Recruiter headcount (FTE + RPO)</label>
+        <input type="number" id="i-rec" value="5" min="1" max="20">
+      </div>
+      <div class="input-field">
+        <label>Average base salary ($)</label>
+        <input type="number" id="i-sal" value="165000" min="40000" max="500000" step="1000">
+      </div>
+      <div class="input-field">
+        <label>Average time-to-fill (days)</label>
+        <input type="number" id="i-ttf" value="55" min="14" max="180">
+      </div>
+      <div class="input-field">
+        <label>Offer acceptance rate</label>
+        <div class="slider-row">
+          <input type="range" id="i-oar" min="50" max="100" value="80">
+          <div class="slider-val" id="i-oar-v">80%</div>
+        </div>
+      </div>
+      <div class="input-field">
+        <label>Benefits loading</label>
+        <div class="slider-row">
+          <input type="range" id="i-bl" min="20" max="40" value="28">
+          <div class="slider-val" id="i-bl-v">28%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="outputs">
+      <div class="output">
+        <div class="o-value" id="o-cap">—</div>
+        <div class="o-label">Capacity / quarter</div>
+      </div>
+      <div class="output">
+        <div class="o-value" id="o-gap">—</div>
+        <div class="o-label">Reqs over capacity</div>
+      </div>
+      <div class="output">
+        <div class="o-value" id="o-cost">—</div>
+        <div class="o-label">Annual loaded cost</div>
+      </div>
+      <div class="output">
+        <div class="o-value" id="o-close">—</div>
+        <div class="o-label">Projected close</div>
+      </div>
+    </div>
+
+    <div class="insight" id="o-insight">
+      Adjust the inputs above; the read-out updates with concrete options for closing the gap.
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top: 48px;">UI mockup — production view</div>
+  <div class="browser">
+    <div class="browser-chrome">
+      <div class="browser-dots"><span></span><span></span><span></span></div>
+      <div class="browser-url">people.ivo.internal/capacity</div>
+    </div>
+    <div class="browser-tabs">
+      <div class="browser-tab active">Dashboard</div>
+      <div class="browser-tab">Headcount Plan</div>
+      <div class="browser-tab">Scenarios</div>
+      <div class="browser-tab">Finance View</div>
+    </div>
+    <div class="browser-body">
+      <div class="browser-metrics">
+        <div class="browser-metric">
+          <div class="bm-val">120</div>
+          <div class="bm-label">Net-new reqs</div>
+          <div class="bm-delta">+15 this qtr</div>
+        </div>
+        <div class="browser-metric">
+          <div class="bm-val">48</div>
+          <div class="bm-label">Capacity / qtr</div>
+          <div class="bm-delta neg">−9 vs. plan</div>
+        </div>
+        <div class="browser-metric">
+          <div class="bm-val">$25.4M</div>
+          <div class="bm-label">Loaded cost</div>
+          <div class="bm-delta">on plan</div>
+        </div>
+        <div class="browser-metric">
+          <div class="bm-val">Q4 '26</div>
+          <div class="bm-label">Close date</div>
+          <div class="bm-delta neg">slip 1 qtr</div>
+        </div>
+      </div>
+      <table class="tbl" style="margin: 0;">
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Function</th>
+            <th>Days open</th>
+            <th>Stage</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="role-name">Sr. Backend Engineer</td>
+            <td>Eng / Platform</td>
+            <td>42</td>
+            <td>Final round</td>
+            <td><span class="badge badge-w1">on track</span></td>
+          </tr>
+          <tr>
+            <td class="role-name">Account Executive, Mid-Market</td>
+            <td>GTM / Sales</td>
+            <td>28</td>
+            <td>Phone screen</td>
+            <td><span class="badge badge-w2">at risk</span></td>
+          </tr>
+          <tr>
+            <td class="role-name">Product Designer</td>
+            <td>Product</td>
+            <td>71</td>
+            <td>Sourcing</td>
+            <td><span class="badge badge-w3">stalled</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============== EMPLOYER BRAND ============== -->
+<section class="section" id="brand">
+  <div class="section-label">06 — Employer brand</div>
+  <h2>Work with people who <em>raise the bar</em>.</h2>
+  <p class="lede">Ivo's employer brand is not a marketing exercise — it's a decision about standards. Every word on the careers page, every job description, every recruiter screen, every onboarding moment communicates the bar. This section is the operating doc for keeping those signals consistent across all of them.</p>
+
+  <div class="callout">
+    <p>The headline does three things at once. It names the peer quality — the single most powerful attractor for top talent. It sets a standard — anyone who joins is expected to raise the bar, not just clear it. And it creates implied exclusivity — not everyone raises the bar; this is for the ones who do. The brand below isn't aspirational. The bar is the brand, and every compromise on a hire is a brand event — not just an HR event.</p>
+  </div>
+
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-num">01</div>
+      <div class="pillar-body">
+        <h4>Excellence — the bar is the brand.</h4>
+        <p>Job descriptions communicate what exceptional looks like, not just what the role requires. The interview process tests for quality of thinking, not credentials. Mediocre hires get treated as brand events because that's what they are. Onboarding communicates the standard from day one, not after a ramp period. Excellence cannot coexist with tolerance for low standards.</p>
+        <div class="tag-list">
+          <div class="tag">no degree gates</div>
+          <div class="tag">judgment over credentials</div>
+          <div class="tag">standard from Day 1</div>
+        </div>
+      </div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02</div>
+      <div class="pillar-body">
+        <h4>Ownership — there is no observation period.</h4>
+        <p>New hires are in customer conversations and product discussions in their first weeks. Decisions get made by the person closest to the problem, not the most senior person in the room. Ambiguity is a feature, not a bug — the people who thrive here create structure, they don't wait for it. Small teams carrying large surface area cannot afford passengers.</p>
+        <div class="tag-list">
+          <div class="tag">customer convos in week one</div>
+          <div class="tag">no observation period</div>
+          <div class="tag">accountability for outcomes</div>
+        </div>
+      </div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03</div>
+      <div class="pillar-body">
+        <h4>Peer quality — the team is the perk.</h4>
+        <p>Referrals are the highest-quality pipeline because exceptional people know other exceptional people. The hiring bar must be maintained under growth pressure — every compromise erodes the culture. Team quality is a competitive advantage that compounds: great people attract great people. Intellectual honesty is valued over consensus — the best idea wins, not the most senior voice.</p>
+        <div class="tag-list">
+          <div class="tag">referral-first sourcing</div>
+          <div class="tag">no bar drops under volume</div>
+          <div class="tag">best idea wins</div>
+        </div>
+      </div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">04</div>
+      <div class="pillar-body">
+        <h4>Growth velocity — earned through impact, not tenure.</h4>
+        <p>Growth here is measured in what you ship and the standard you set, not how long you've been around. Feedback is direct and frequent — not managed through annual reviews. The category is forming now; the people who join at this stage shape what it becomes. Speed of learning is itself a form of value creation at this stage of the company.</p>
+        <div class="tag-list">
+          <div class="tag">direct feedback always</div>
+          <div class="tag">earned scope</div>
+          <div class="tag">category-defining stage</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top: 32px;">
+    <p><strong>Who Ivo is recruiting:</strong> the target candidate is not defined by a legal background. It's defined by a mode of operating — scrappy, high-agency builders with strong SaaS instincts who think in outcomes rather than tasks and find hard problems in complex domains energizing. The thrives/struggles filter below is a candidate self-selection tool — used on the careers page, in JDs, and in recruiter outreach to pre-qualify inbound and repel the wrong profiles before they enter the process.</p>
+  </div>
+
+  <table class="tbl" style="margin: 24px 0;">
+    <thead>
+      <tr>
+        <th style="width: 50%;">Thrives here</th>
+        <th style="width: 50%;">Struggles here</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="role-name">Writes the playbook as you go</td><td>Waits for the playbook to arrive</td></tr>
+      <tr><td class="role-name">Brings a real opinion in the room</td><td>Defers to whoever's most senior</td></tr>
+      <tr><td class="role-name">Energized by hard enterprise problems</td><td>Needs a tightly defined lane</td></tr>
+      <tr><td class="role-name">Ships fast, raises the bar as they go</td><td>Optimizes for looking busy</td></tr>
+      <tr><td class="role-name">Finds the work itself motivating</td><td>Needs external structure to engage</td></tr>
+      <tr><td class="role-name">Gets better from direct feedback</td><td>Needs feedback managed carefully</td></tr>
+    </tbody>
+  </table>
+
+  <div class="careers-cta">
+    <div class="cc-label">Careers site — preview</div>
+    <div class="cc-row">
+      <p class="cc-copy">A working sketch of ivo.ai/careers — the four pillars made literal, comp visible, no stock photography, the thrives/struggles filter on the page itself.</p>
+      <button class="btn" id="toggle-careers">View careers site mockup →</button>
+    </div>
+  </div>
+
+  <div class="browser" id="careers-mockup" style="display: none;">
+    <div class="browser-chrome">
+      <div class="browser-dots"><span></span><span></span><span></span></div>
+      <div class="browser-url">ivo.ai/careers</div>
+    </div>
+    <div class="cm-nav">
+      <div class="cm-logo">ivo</div>
+      <div class="cm-nav-links">
+        <span>products</span>
+        <span>customers</span>
+        <span>resources</span>
+        <span class="active">careers</span>
+      </div>
+      <button class="btn cm-nav-btn">Request demo</button>
+    </div>
+    <div class="browser-body cm-body">
+      <!-- HERO -->
+      <div class="cm-hero">
+        <div>
+          <div class="cm-eyebrow">Careers at Ivo</div>
+          <h3 class="cm-hero-h">Work with people who <em>raise the bar.</em></h3>
+          <p class="cm-hero-body">We're rebuilding how the world's most consequential contracts get done. If you move fast, own outcomes, and want to be in the room where it happens — keep reading.</p>
+          <div class="cm-hero-btns">
+            <button class="btn cm-pill">See open roles</button>
+            <button class="btn cm-pill">Meet the team</button>
+          </div>
+        </div>
+        <div class="cm-stats">
+          <div class="cm-stat">
+            <div class="cm-stat-num">6×</div>
+            <div class="cm-stat-label">ARR growth over the last 12 months</div>
+          </div>
+          <div class="cm-stat">
+            <div class="cm-stat-num">85%</div>
+            <div class="cm-stat-label">Win rate in head-to-head trials against competitors</div>
+          </div>
+          <div class="cm-stat">
+            <div class="cm-stat-num">~60 → 180</div>
+            <div class="cm-stat-label">Team size now, and where we're headed by end of 2026</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIFE AT IVO -->
+      <div class="cm-section">
+        <div class="cm-twocol">
+          <div>
+            <div class="cm-eyebrow">Life at Ivo</div>
+            <h3 class="cm-section-h">A place where you <em>grow fast.</em></h3>
+            <p class="cm-section-body">The work is challenging and the expectations are high. You'll be surrounded by smart, driven people who care deeply about doing great work. They'll push you, give honest feedback, and help you grow. If you want to grow in your career, this is the kind of place where that happens fast.</p>
+          </div>
+          <div class="cm-video">
+            <div class="cm-play"><span class="cm-play-tri"></span></div>
+            <div class="cm-video-tag">Life at Ivo · 3 min</div>
+            <div class="cm-vp">
+              <span class="cm-vp-d"></span><span class="cm-vp-d"></span>
+              <span class="cm-vp-n"></span><span></span>
+              <span></span><span></span>
+              <span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <div class="cm-scenes">
+          <div class="cm-scene cm-scene-blue">
+            <div class="cm-scene-bar">
+              <div class="cm-scene-text">Deep work</div>
+              <div class="cm-scene-sub">The hardest problems happen quietly</div>
+            </div>
+          </div>
+          <div class="cm-scene cm-scene-green">
+            <div class="cm-scene-bar">
+              <div class="cm-scene-text">Small team</div>
+              <div class="cm-scene-sub">No place to hide. No need to.</div>
+            </div>
+          </div>
+          <div class="cm-scene cm-scene-warm">
+            <div class="cm-scene-bar">
+              <div class="cm-scene-text">High stakes</div>
+              <div class="cm-scene-sub">Uber, Shopify, IBM trust this product</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PULL QUOTE -->
+      <div class="cm-pq">
+        <div class="cm-pq-mark">"</div>
+        <div>
+          <p class="cm-pq-quote">The moment I knew I was in the right place: I gave my actual opinion in a meeting and instead of being managed, I was either agreed with or pushed back on directly. No politics. Just thinking.</p>
+          <div class="cm-pq-attr">Account Executive · joined from Series C SaaS startup</div>
+        </div>
+      </div>
+
+      <!-- WHAT IT'S ACTUALLY LIKE -->
+      <div class="cm-section">
+        <div class="cm-eyebrow">What it's actually like</div>
+        <div class="cm-life-grid">
+          <div class="cm-life">
+            <div class="cm-life-num">6×</div>
+            <div class="cm-life-h">ARR growth, last 12 months</div>
+            <div class="cm-life-b">Proof we're solving a real problem at real scale — and that the product actually works.</div>
+          </div>
+          <div class="cm-life">
+            <div class="cm-life-num">85%</div>
+            <div class="cm-life-h">Win rate in trials</div>
+            <div class="cm-life-b">Head-to-head against every major competitor. The product wins on merit. That's the standard everything else is held to.</div>
+          </div>
+          <div class="cm-life">
+            <div class="cm-life-h">Impact from day one</div>
+            <div class="cm-life-b">There's no observation period. You'll be in customer conversations, shaping product decisions, and owning real outcomes in your first weeks.</div>
+          </div>
+          <div class="cm-life">
+            <div class="cm-life-h">Five days in office</div>
+            <div class="cm-life-b">SF, London, New York. Not because it's a rule — because the pace demands it and the work is better for it.</div>
+          </div>
+          <div class="cm-life">
+            <div class="cm-life-h">The work doesn't wait</div>
+            <div class="cm-life-b">The best people here aren't watching the clock. They're deep in a problem because the problem is interesting and the outcome matters.</div>
+          </div>
+          <div class="cm-life">
+            <div class="cm-life-h">~60 people, growing to 180</div>
+            <div class="cm-life-b">Small enough that your fingerprints show everywhere. Large enough that we're building something real.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DARK BELIEFS -->
+      <div class="cm-dark">
+        <div class="cm-eyebrow cm-eyebrow-dark">What we believe</div>
+        <h3 class="cm-dark-h">Great work requires <em>full commitment.</em></h3>
+        <div class="cm-dark-grid">
+          <div>
+            <div class="cm-dark-h-sub">Ownership isn't a title</div>
+            <p class="cm-dark-b">The people who do their best work here are the ones who feel personally accountable for outcomes — not just tasks. If a problem is in your orbit, you own it until it's solved.</p>
+          </div>
+          <div>
+            <div class="cm-dark-h-sub">Hard problems take real effort</div>
+            <p class="cm-dark-b">We're solving genuinely difficult problems in a domain that has resisted automation for decades. Breakthroughs happen when someone stays with a problem long enough to actually understand it.</p>
+          </div>
+          <div>
+            <div class="cm-dark-h-sub">Speed is a form of respect</div>
+            <p class="cm-dark-b">Moving fast isn't recklessness — it's a signal that you take the work seriously. Slow decisions and unnecessary process are how good companies become average ones.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- THRIVES / STRUGGLES -->
+      <div class="cm-section">
+        <div class="cm-twocol">
+          <div>
+            <div class="cm-eyebrow">What this looks like</div>
+            <h3 class="cm-section-h">We're not for everyone. <em>That's intentional.</em></h3>
+            <p class="cm-section-body">The best companies are defined not just by who they hire, but by who they don't. Ivo is a place for people who want to do the hardest version of excellent work — and find that energizing rather than exhausting.</p>
+          </div>
+          <div class="cm-fit">
+            <div class="cm-fit-row">
+              <div><div class="cm-fit-label-y">Thrives here</div><div class="cm-fit-y">Writes the playbook as you go</div></div>
+              <div><div class="cm-fit-label-n">Struggles here</div><div class="cm-fit-n">Waits for the playbook to arrive</div></div>
+            </div>
+            <div class="cm-fit-row">
+              <div><div class="cm-fit-label-y">Thrives here</div><div class="cm-fit-y">Brings a real opinion in the room</div></div>
+              <div><div class="cm-fit-label-n">Struggles here</div><div class="cm-fit-n">Defers to whoever's most senior</div></div>
+            </div>
+            <div class="cm-fit-row">
+              <div><div class="cm-fit-label-y">Thrives here</div><div class="cm-fit-y">Energized by hard enterprise problems</div></div>
+              <div><div class="cm-fit-label-n">Struggles here</div><div class="cm-fit-n">Needs a tightly defined lane</div></div>
+            </div>
+            <div class="cm-fit-row">
+              <div><div class="cm-fit-label-y">Thrives here</div><div class="cm-fit-y">Ships fast, raises the bar as they go</div></div>
+              <div><div class="cm-fit-label-n">Struggles here</div><div class="cm-fit-n">Optimizes for looking busy</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VISA -->
+      <div class="cm-visa">
+        <div class="cm-visa-h">Visa &amp; green card sponsorship</div>
+        <div class="cm-visa-b">We've supported more than half our staff — including both founders — in obtaining visas and green cards. If you're the right fit, we'll go above and beyond to get you here.</div>
+      </div>
+
+      <!-- Q&A -->
+      <div class="cm-section">
+        <h3 class="cm-qa-h">Questions we actually get asked.</h3>
+        <div class="cm-qa-row">
+          <div class="cm-qa-q">Do I need legal experience to work here?</div>
+          <div class="cm-qa-a">No. <strong>We index for strong SaaS instincts, not legal credentials.</strong> Most of the team didn't come from law. The domain is learnable. The ability to move fast, solve hard problems, and stay in the room when things get uncomfortable — that's what we hire for.</div>
+        </div>
+        <div class="cm-qa-row">
+          <div class="cm-qa-q">Is there a clear career path?</div>
+          <div class="cm-qa-a">Honest answer: it's early enough that you help create it. <strong>We can tell you what you'll own — not what your title will be in three years.</strong> If you need a defined ladder, we're probably not the right fit yet. If you want to define the ladder, you'll like it here.</div>
+        </div>
+        <div class="cm-qa-row">
+          <div class="cm-qa-q">Why should I leave my current job for this?</div>
+          <div class="cm-qa-a">You probably shouldn't, unless the work you're doing now doesn't make you feel anything. <strong>Ivo is for people who are slightly restless</strong> — who read about what we're building and immediately have opinions on how to do it better. The category is forming. The team is small. You'll leave fingerprints.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dark-strip">
+    <div class="ds-arrow">→</div>
+    <div class="ds-text">
+      <h3>Ivo employer brand <em>narrative</em> — download</h3>
+      <div class="ds-sub">The full strategy document — four pillars, who we recruit, what onboarding must communicate, how to know if it's working, and the creative brief for anyone producing brand content. The same doc the careers page is built from.</div>
+    </div>
+    <div>
+      <button class="btn btn-dark" id="dl-narrative">Download .docx →</button>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">ROI metrics — six-month targets</div>
+        <div class="ah-sub">What we hold the function to, and where each number comes from.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <table class="tbl">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Baseline</th>
+            <th>6-month target</th>
+            <th>Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="role-name">Time to fill (days)</td><td>58</td><td>&lt;45</td><td>Ashby</td></tr>
+          <tr><td class="role-name">Offer acceptance rate</td><td>72%</td><td>&gt;85%</td><td>Ashby</td></tr>
+          <tr><td class="role-name">Candidate experience score</td><td>3.6 / 5.0</td><td>&gt;4.2 / 5.0</td><td>Post-process survey</td></tr>
+          <tr><td class="role-name">Sourcing-generated pipeline</td><td>22%</td><td>&gt;40%</td><td>Ashby source mix</td></tr>
+          <tr><td class="role-name">Glassdoor overall rating</td><td>3.6</td><td>4.2</td><td>Glassdoor</td></tr>
+          <tr><td class="role-name">Candidate NPS (declined)</td><td>−12</td><td>+20</td><td>Post-decline survey</td></tr>
+          <tr><td class="role-name">90-day new hire retention</td><td>91%</td><td>&gt;95%</td><td>HRIS</td></tr>
+          <tr><td class="role-name">Referral-generated hires</td><td>14%</td><td>&gt;30%</td><td>Ashby + program data</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-head">
+      <div class="ah-left">
+        <div class="ah-title">What makes a strong job description</div>
+        <div class="ah-sub">Specific changes, not generic advice.</div>
+      </div>
+      <div class="accordion-chevron">▼</div>
+    </div>
+    <div class="accordion-body">
+      <p><strong>Remove degree requirements unless legally required or the role genuinely needs the credential.</strong> Most don't. The data on this is clean — degree gates suppress qualified applicant volume by 30–40% with no measurable downstream signal on hire quality.</p>
+      <p><strong>Add a "what this role won't be" section.</strong> Setting non-expectations is more honest than over-promising and saves the candidate four hours of self-disqualification later.</p>
+      <p><strong>Lead with the first 90 days.</strong> Most JDs lead with company boilerplate; that's the part candidates skim. The first 200 words should be what the person will actually be doing in their first quarter.</p>
+      <p><strong>Include the comp range.</strong> Legally required in many states. Do it everywhere — the ones who care will appreciate it, and the ones who'd ghost you over the number self-select out before the screen.</p>
+      <p><strong>A/B test two versions per JD for the first 60 days.</strong> Track apply rate, qualified-applicant rate, and decline-after-application rate. Pick the winner. Repeat. Most companies have never done this, which is why most JDs read identically.</p>
+      <p><strong>Hiring manager voice, not corporate voice.</strong> The JD should sound like the person they'll work for, not like the website footer.</p>
+      <p><strong>Length: 350–500 words.</strong> Most JDs are 1200+. Senior-candidate apply rate falls off a cliff past 600 words, and the data is consistent across functions.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+// ---------- NAV / SECTION SWITCHING ----------
+const links = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('.section');
+const navCards = document.querySelectorAll('.nav-card');
+
+function showSection(id) {
+  links.forEach(l => l.classList.toggle('active', l.dataset.section === id));
+  sections.forEach(s => {
+    if (s.id === id) {
+      s.style.display = 'block';
+      // force reflow so transition triggers
+      void s.offsetHeight;
+      s.classList.add('active');
+    } else {
+      s.classList.remove('active');
+      // delay hide to let transition finish
+      setTimeout(() => { if (!s.classList.contains('active')) s.style.display = 'none'; }, 250);
+    }
+  });
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+links.forEach(l => l.addEventListener('click', e => {
+  e.preventDefault();
+  showSection(l.dataset.section);
+}));
+
+navCards.forEach(c => c.addEventListener('click', () => {
+  showSection(c.dataset.go);
+}));
+
+// ---------- ACCORDIONS ----------
+document.querySelectorAll('.accordion .accordion-head').forEach(head => {
+  head.addEventListener('click', e => {
+    // only the closest accordion should toggle
+    const acc = head.closest('.accordion');
+    acc.classList.toggle('open');
+  });
+});
+
+// ---------- CAPACITY PLANNER ----------
+const f = id => document.getElementById(id);
+const inputs = ['i-hc','i-rec','i-sal','i-ttf','i-oar','i-bl'].map(f);
+const oarV = f('i-oar-v');
+const blV = f('i-bl-v');
+
+function fmtCurrency(m) {
+  return '$' + m.toFixed(1) + 'M';
+}
+
+function quarterFromMonth(date) {
+  const m = date.getMonth();
+  const q = Math.floor(m / 3) + 1;
+  const y = date.getFullYear() % 100;
+  return "Q" + q + " '" + String(y).padStart(2,'0');
+}
+
+function compute() {
+  const hc = +f('i-hc').value || 0;
+  const rec = +f('i-rec').value || 0;
+  const sal = +f('i-sal').value || 0;
+  const ttf = +f('i-ttf').value || 1;
+  const oar = +f('i-oar').value;       // 50–100
+  const bl = +f('i-bl').value;         // 20–40
+
+  oarV.textContent = oar + '%';
+  blV.textContent = bl + '%';
+
+  const oarDec = oar / 100;
+  const blDec = bl / 100;
+
+  // capacity per quarter (literal formula from spec)
+  // Capacity/qtr = round(recruiters × (90 / ttf) × (12 / acceptanceRate))
+  // acceptanceRate as decimal (e.g. 0.80)
+  let capacity = Math.round(rec * (90 / ttf) * (12 / oarDec));
+  // Sanity bound
+  if (!isFinite(capacity) || capacity < 0) capacity = 0;
+
+  const gap = Math.max(0, hc - capacity);
+  const cost = (hc * sal * (1 + blDec)) / 1_000_000;
+
+  const today = new Date();
+  const monthsToClose = capacity > 0 ? Math.ceil(hc / capacity) * 3 : 12;
+  const closeDate = new Date(today.getFullYear(), today.getMonth() + monthsToClose, 1);
+
+  f('o-cap').textContent = capacity.toLocaleString();
+  f('o-gap').textContent = gap.toLocaleString();
+  f('o-cost').textContent = fmtCurrency(cost);
+  f('o-close').textContent = quarterFromMonth(closeDate);
+
+  // Insight
+  const insight = f('o-insight');
+  if (gap === 0) {
+    insight.innerHTML = "<strong>The plan is executable with the current team.</strong> Capacity meets demand at these inputs. The next-order question is quality, not throughput — watch offer accept rate and 90-day post-hire NPS as the leading indicators that the team is closing for fit, not just for headcount.";
+  } else if (gap <= 5) {
+    insight.innerHTML = "<strong>A " + gap + "-hire gap is a minor flex.</strong> Options at this scale: extend RPO by one quarter (about $" + (gap * 22000).toLocaleString() + " in fees), shift the start dates of " + gap + " roles into the following quarter, or run a targeted referral push on the two highest-priority slots. Don't add internal recruiter headcount for a gap this size — the cycle time on the hire would eat the gain.";
+  } else {
+    insight.innerHTML = "<strong>The gap (" + gap + " hires) is structural, not seasonal.</strong> Three options worth comparing on the same numbers: (1) add one internal recruiter and one RPO seat — closes roughly " + Math.round(gap * 0.7) + " of the gap by quarter end; (2) phase " + Math.round(gap / 2) + " of the planned hires into the following quarter, accept the slip, and protect quality; (3) reduce time-to-fill to 45 days through process redesign — same effect as adding a recruiter, half the cost, twice the timeline. Pick a combination based on whether the constraint is cash, speed, or quality.";
+  }
+}
+
+inputs.forEach(i => i.addEventListener('input', compute));
+compute();
+
+// ---------- TOGGLE CAREERS MOCKUP ----------
+const careersBtn = document.getElementById('toggle-careers');
+const careersMockup = document.getElementById('careers-mockup');
+careersBtn.addEventListener('click', () => {
+  const isHidden = careersMockup.style.display === 'none' || !careersMockup.style.display;
+  if (isHidden) {
+    careersMockup.style.display = 'block';
+    void careersMockup.offsetHeight;
+    careersMockup.classList.add('visible');
+    careersBtn.textContent = 'Hide preview ↑';
+    setTimeout(() => {
+      careersMockup.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 80);
+  } else {
+    careersMockup.classList.remove('visible');
+    careersBtn.textContent = 'View careers site mockup →';
+    setTimeout(() => {
+      if (!careersMockup.classList.contains('visible')) careersMockup.style.display = 'none';
+    }, 250);
+  }
+});
+
+// ---------- DOWNLOAD IVO EMPLOYER BRAND NARRATIVE (.docx) ----------
+const NARRATIVE_DOCX_B64 = "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";
+
+document.getElementById('dl-narrative').addEventListener('click', () => {
+  const binary = atob(NARRATIVE_DOCX_B64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  const blob = new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'Ivo_Employer_Brand_Narrative.docx';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+</script>
+
+</body>
+</html>
