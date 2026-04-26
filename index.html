@@ -426,6 +426,18 @@ p strong { color: var(--ink-2); font-weight: 500; }
 .manual-bullet li::before { content: "→"; position: absolute; left: 0; color: var(--ink-4); }
 .manual-bullet li strong { color: var(--ink); font-weight: 500; }
 .manual-callout { background: var(--paper-2); border: 1px solid var(--border); border-left: 2px solid var(--accent); border-radius: 10px; padding: 16px 20px; margin: 20px 0 0; font-size: 14.5px; color: var(--ink-2); line-height: 1.65; font-style: italic; }
+
+.careers-disclosure { margin: 0 0 32px; }
+.careers-disclosure summary { list-style: none; cursor: pointer; padding: 22px 26px; border: 1px solid var(--border-2); border-radius: 16px; background: var(--paper); display: flex; align-items: center; justify-content: space-between; gap: 24px; transition: background 0.15s ease, border-color 0.15s ease; }
+.careers-disclosure summary::-webkit-details-marker { display: none; }
+.careers-disclosure summary::marker { content: ""; }
+.careers-disclosure summary:hover { background: var(--paper-2); border-color: var(--ink-3); }
+.careers-disclosure .cd-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: 22px; color: var(--ink); letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 6px; }
+.careers-disclosure .cd-sub { font-size: 14px; color: var(--ink-3); line-height: 1.55; max-width: 600px; }
+.careers-disclosure .cd-chevron { font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--ink-3); transition: transform 0.25s ease; flex-shrink: 0; }
+.careers-disclosure[open] summary { background: var(--paper-2); border-color: var(--ink-3); border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.careers-disclosure[open] .cd-chevron { transform: rotate(180deg); }
+.careers-disclosure[open] #careers-mockup { margin-top: 0; border-top-left-radius: 0; border-top-right-radius: 0; border-top: none; }
 </style>
 <nav class="nav">
   <div class="nav-inner">
@@ -1138,8 +1150,14 @@ p strong { color: var(--ink-2); font-weight: 500; }
     </tbody>
   </table>
   <div class="section-label" style="margin-top: 36px;">Careers site &mdash; preview</div>
-  <p style="font-size: 15.5px; max-width: 700px; margin-bottom: 20px;">A working sketch of <strong>ivo.ai/careers</strong> &mdash; the four pillars made literal, comp visible, no stock photography, the thrives/struggles filter on the page itself.</p>
-
+  <details class="careers-disclosure" id="careers-disclosure">
+    <summary>
+      <div class="cd-summary-text">
+        <div class="cd-title">View ivo.ai/careers mockup</div>
+        <div class="cd-sub">A working sketch &mdash; the four pillars made literal, comp visible, no stock photography, the thrives/struggles filter on the page itself.</div>
+      </div>
+      <span class="cd-chevron">&#9660;</span>
+    </summary>
   <div class="browser" id="careers-mockup">
     <div class="browser-chrome"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">ivo.ai/careers</div></div>
     <div class="cm-nav">
@@ -1224,6 +1242,8 @@ p strong { color: var(--ink-2); font-weight: 500; }
       </div>
     </div>
   </div>
+  </details>
+
   <div class="dark-strip">
     <div class="ds-arrow">&rarr;</div>
     <div class="ds-text"><h3>Ivo employer brand <em>narrative</em> &mdash; download</h3><div class="ds-sub">The full strategy document &mdash; four pillars, who we recruit, what onboarding must communicate, how to know if it's working, and the creative brief for anyone producing brand content.</div></div>
