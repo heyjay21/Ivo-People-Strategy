@@ -363,6 +363,38 @@ p strong { color: var(--ink-2); font-weight: 500; }
   .ramp-grid { grid-template-columns: 1fr 1fr; }
   .lifecycle { gap: 6px; }
 }
+
+.milestones { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0 32px; }
+.milestone { background: var(--paper); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; }
+.milestone .ms-day { font-family: 'Fraunces', serif; font-weight: 300; font-size: 26px; letter-spacing: -0.02em; color: var(--ink); line-height: 1.1; margin-bottom: 6px; }
+.milestone .ms-event { font-size: 12px; color: var(--ink-3); line-height: 1.4; }
+.plan-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 30px 0 18px; }
+.plan-tab { font-family: 'DM Sans', sans-serif; font-size: 12.5px; font-weight: 400; background: var(--paper); border: 1px solid var(--border-2); color: var(--ink-3); padding: 8px 18px; border-radius: 100px; cursor: pointer; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease; white-space: nowrap; }
+.plan-tab:hover { background: var(--paper-2); color: var(--ink-2); }
+.plan-tab.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.plan-highlight { border: 1px solid rgba(196,99,26,0.35); background: var(--warm-2); border-radius: 12px; padding: 14px 20px; margin: 0 0 28px; font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
+.plan-highlight strong { color: var(--warm); font-weight: 500; }
+.plan-content { display: none; }
+.plan-content.active { display: block; opacity: 0; animation: planFade 0.25s ease forwards; }
+@keyframes planFade { to { opacity: 1; } }
+.plan-section-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-4); margin: 14px 0 18px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.plan-day { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--border); }
+.plan-day:last-child { border-bottom: none; }
+.plan-day .day-num { font-family: 'DM Sans', sans-serif; font-size: 12.5px; color: var(--ink-3); font-weight: 500; letter-spacing: 0.04em; padding-top: 4px; }
+.plan-day .day-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: 19px; color: var(--ink); margin-bottom: 12px; letter-spacing: -0.01em; line-height: 1.25; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.day-tag { font-size: 10.5px; padding: 3px 10px; border-radius: 100px; text-transform: lowercase; letter-spacing: 0.04em; font-family: 'DM Sans', sans-serif; font-weight: 400; }
+.day-tag-fire { background: rgba(196,99,26,0.12); color: var(--warm); border: 1px solid rgba(196,99,26,0.3); }
+.day-tag-mile { background: var(--accent-3); color: var(--accent); border: 1px solid rgba(45,90,61,0.18); }
+.day-actions { list-style: none; display: flex; flex-direction: column; gap: 7px; padding: 0; margin: 0; }
+.day-actions li { position: relative; padding-left: 22px; font-size: 14px; color: var(--ink-2); line-height: 1.55; }
+.day-actions li::before { content: "→"; position: absolute; left: 0; color: var(--ink-4); }
+@media (max-width: 720px) {
+  .milestones { grid-template-columns: 1fr 1fr; }
+  .plan-day { grid-template-columns: 1fr; gap: 8px; }
+  .plan-tabs { gap: 6px; }
+  .plan-tab { font-size: 11.5px; padding: 6px 12px; }
+}
+
 </style>
 <nav class="nav">
   <div class="nav-inner">
@@ -420,123 +452,234 @@ p strong { color: var(--ink-2); font-weight: 500; }
 </section>
 
 <section class="section" id="plan">
-  <div class="section-label">02 &mdash; 12-week plan</div>
-  <h2>Listen for two weeks. Build for six. <em>Optimize</em> the last four.</h2>
-  <p class="lede">Two root problems to solve at the same time: low top-of-funnel volume and an interview process that runs too long. Every action across all twelve weeks gets filtered through one lens &mdash; what does Ivo need to hit the year-end hiring plan, and how does TA operate as a true business partner to make that happen.</p>
+  <div class="section-label">02 &mdash; 90-day plan</div>
+  <h2>Triage in week one. Build through week eight. <em>Optimize</em> the last month.</h2>
+  <p class="lede">Two root problems to solve at the same time: low top-of-funnel volume and an interview process that runs too long. Every action across all ninety days gets filtered through one lens &mdash; what does Ivo need to hit the year-end hiring plan, and how does TA operate as a true business partner to make that happen.</p>
+
   <div class="metrics">
-    <div class="metric"><div class="metric-value">5</div><div class="metric-label">Strategic goals</div><div class="metric-sub">All twelve weeks ladder up</div></div>
-    <div class="metric"><div class="metric-value">12</div><div class="metric-label">Weeks</div><div class="metric-sub">Three phases</div></div>
-    <div class="metric"><div class="metric-value">W3</div><div class="metric-label">Active recruiting begins</div><div class="metric-sub">TA reqs go live</div></div>
-    <div class="metric"><div class="metric-value">W6</div><div class="metric-label">First plan projection</div><div class="metric-sub">Course-correct early</div></div>
+    <div class="metric"><div class="metric-value">5</div><div class="metric-label">Strategic goals</div><div class="metric-sub">All ninety days ladder up</div></div>
+    <div class="metric"><div class="metric-value">90</div><div class="metric-label">Days</div><div class="metric-sub">Three phases</div></div>
+    <div class="metric"><div class="metric-value">D8</div><div class="metric-label">Active recruiting</div><div class="metric-sub">TA reqs go live</div></div>
+    <div class="metric"><div class="metric-value">D60</div><div class="metric-label">First plan projection</div><div class="metric-sub">Course-correct early</div></div>
   </div>
-  <div class="callout"><p>Five strategic goals hold the plan together. Hit the year-end hiring plan to support sales targets. Reduce time-to-hire through process discipline and HM alignment. Strengthen employer brand and improve top-of-funnel volume. Improve candidate experience from offer signature through day one. Give leadership real-time visibility into funnel health and hiring performance.</p></div>
-  <div class="accordion open">
-    <div class="accordion-head"><div class="ah-left"><div class="ah-eyebrow">Phase 1 &middot; Weeks 1&ndash;2</div><div class="ah-title">Listen, diagnose &amp; prioritize.</div><div class="ah-sub">Understand the business before making a single decision. Click any week to see the execution.</div></div><div class="accordion-chevron">&#9660;</div></div>
-    <div class="accordion-body">
-      <p style="font-size: 14px;">Every action gets filtered through what the business actually needs, not what TA assumes it needs. The output of Phase 1 is a stack-ranked role list pressure-tested with the CEO and a headcount proposal submitted for approval &mdash; not a finished plan, but enough signal to move on Week 3.</p>
-      <div class="weeks-list">
-        <div class="acc-nested accordion"><div class="accordion-head"><div class="ah-left"><div class="ah-title">Week 1 &mdash; stakeholder listening tour</div><div class="ah-sub">Stakeholder sessions, sourcing diagnostic, CEO pressure test.</div></div><div class="accordion-chevron">&#9660;</div></div><div class="accordion-body"><ul>
-          <li>Stakeholder meetings with every functional leader. Same five questions: org vision now and EOY; top 3 team priorities; material business impact of each open role; where the team is performing well; where the gaps are creating drag.</li>
-          <li>After each session: source 5&ndash;8 diverse candidates against the prioritized roles. Diagnostic, not delivery &mdash; surface preference patterns, blind spots, what HMs respond to vs. what they say they want.</li>
-          <li>Alignment meeting with the CEO. Frame everything in time, cost, risk, velocity &mdash; every stakeholder you've spoken to is reading the same room from a different angle, and the CEO is the integrator.</li>
-          <li>Stack-rank open roles using three lenses: business priority, current team strain, future direction.</li>
-          <li>Take the prioritized stack to the CEO. Not for approval &mdash; for a pressure test of the logic and an alignment on talent philosophy.</li>
-          <li>Deliverables: stakeholder insights summary (one page per team), role prioritization stack rank, bias and preference profile by team, themes across sessions.</li>
-        </ul></div></div>
-        <div class="acc-nested accordion"><div class="accordion-head"><div class="ah-left"><div class="ah-title">Week 2 &mdash; mapping &amp; viability + headcount proposal</div><div class="ah-sub">Translate priorities into a realistic execution plan. Submit the headcount proposal by Friday.</div></div><div class="accordion-chevron">&#9660;</div></div><div class="accordion-body"><ul>
-          <li>Role mapping: geographic breakdown, department and seniority distribution, which roles need programs (university, events, sourcing campaigns).</li>
-          <li>Market viability deep dive: pull historical TTH from Ashby for comparable roles; benchmark goals against what's actually achievable. Flag unrealistic goals early &mdash; not in month five when it's too late to recover.</li>
-          <li>Tech stack audit: tool spend vs. ROI, where hires are actually coming from, where automation can reduce administrative burden.</li>
-          <li>Capacity planning model: based on projected role load, role type, and department complexity &mdash; how many TA team members are actually required.</li>
-          <li>Headcount proposal + org chart submitted for approval by end of Week 2. Grounded in the role map and capacity model, not assumptions. TA team reqs open Week 3.</li>
-          <li>Guiding principle: minimum viable operations first. Stability before optimization.</li>
-        </ul></div></div>
-      </div>
-    </div>
+
+  <div class="section-label" style="margin-top: 36px;">Key milestones &mdash; first two weeks</div>
+  <div class="milestones">
+    <div class="milestone"><div class="ms-day">Day 8</div><div class="ms-event">TA team reqs posted</div></div>
+    <div class="milestone"><div class="ms-day">Day 10</div><div class="ms-event">ATS cleanup complete</div></div>
+    <div class="milestone"><div class="ms-day">Day 12</div><div class="ms-event">JD templates compliant</div></div>
+    <div class="milestone"><div class="ms-day">Day 14</div><div class="ms-event">TA offers extended</div></div>
   </div>
-  <div class="accordion">
-    <div class="accordion-head"><div class="ah-left"><div class="ah-eyebrow">Phase 2 &middot; Weeks 3&ndash;8</div><div class="ah-title">Build, fix &amp; activate.</div><div class="ah-sub">Active recruiting begins. Process gets observed, then improved. Brand work goes live.</div></div><div class="accordion-chevron">&#9660;</div></div>
-    <div class="accordion-body">
-      <p style="font-size: 14px;">By Week 6 leadership has visibility every Monday morning. By Week 8 the brand strategy is live. Phase 2 is six weeks of operating-mode TA &mdash; running pipeline, fixing what's broken, and shipping the infrastructure that lets the function scale past one operator.</p>
-      <div class="weeks-list">
-        <div class="acc-nested accordion"><div class="accordion-head"><div class="ah-left"><div class="ah-title">Week 3 &mdash; active recruiting + TA hiring opens</div><div class="ah-sub">Reqs go live. Process observed, not changed yet.</div></div><div class="accordion-chevron">&#9660;</div></div><div class="accordion-body"><ul>
-          <li>TA team reqs live. Active sourcing begins in parallel with open business roles. Target: offers extended weeks 5&ndash;6, starts week 7.</li>
-          <li>Process assessment: meet with the existing TA team to understand suspected bottlenecks; independently observe candidate flow end-to-end for both technical and GTM loops.</li>
-          <li>Light HM brief before HMs interview this week &mdash; what's expected, how to give structured feedback, SLA for turnaround. Not full enablement (that's Week 7), just table stakes.</li>
-          <li>Recruiter enablement v1 begins: process documentation, company pitch training, comp/equity training, hiring philosophy, do's and don'ts.</li>
-          <li>Deliverables: TA reqs live; process map for tech and GTM; friction log (observations, not proposals); recruiter enablement v1 underway.</li>
-        </ul></div></div>
-        <div class="acc-nested accordion"><div class="accordion-head"><div class="ah-left"><div class="ah-title">Week 4 &mdash; sourcing intelligence + brand activation</div><div class="ah-sub">Stop fishing in the wrong ponds. Make the company visible where target talent actually lives.</div></div><div class="accordion-chevron">&#9660;</div></div><div class="accordion-body"><ul>
-          <li>Sourcing audit: what candidates are saying about us, where the talent we want lives, what we're getting vs. what we need.</li>
-          <li>Talent mapping: build sourcing bank by company, community, event. For high-priority roles, identify alum networks and online communities aligned with team direction.</li>
-          <li>For meetup groups: scrub the full attendee list, connect on LinkedIn, work toward attending or hosting an event within two weeks.</li>
-          <li>Launch LinkedIn posting cadence. A/B test outreach messages &mdash; subject framing, role positioning, mission vs. growth vs. comp angles.</li>
-          <li>Deliverables: sourcing intelligence brief, talent map, event activation plan (next 4 weeks), posting cadence launched, A/B variants live.</li>
-        </ul></div></div>
-        <div class="acc-nested accordion"><div class="accordion-head"><div class="ah-left"><div class="ah-title">Week 5 &mdash; offer &amp; pre-boarding audit</div><div class="ah-sub">The space between offer signature and Day 1 is where companies lose people without knowing it.</div></div><div class="accordion-chevron">&#9660;</div></div><div class="accordion-body"><ul>
-          <li>Deep-dive the offer extension workflow &mdash; what's the experience from verbal to signature?</li>
-          <li>Where can we automate and streamline without making it feel transactional?</li>
-          <li>Build pre-start engagement playbook v1: swag one week before start, invite to relevant team events, slow-drip welcome messages, structured check-ins from recruiter and HM.</li>
-          <li>Goal: by Day 1, new hires already feel like part of the team.</li>
-          <li>Deliverables: offer + pre-boarding gap analysis, pre-start engagement playbook v1, automation map, proposal for structural changes needing leadership sign-off.</li>
-        </ul></div></div>
-        <div class="acc-nested accordion"><div class="accordion-head"><div class="ah-left"><div class="ah-title">Week 6 &mdash; dashboards, SHP tracker, first plan projection</div><div class="ah-sub">Course correct early. Surface trajectory before it becomes a crisis.</div></div><div class="accordion-chevron">&#9660;</div></div><div class="accordion-body"><ul>
-          <li>Monthly leadership hiring review cadence launched: metrics, tracking vs. plan, role adjustments, headcount changes. All decisions transcribed and followed up via email.</li>
-          <li>Ashby dashboards live for HMs (org-level), the exec team (company-wide), and CEO (high-level mapped to business goals).</li>
-          <li>SHP (Stakeholder Hiring Plan) Tracker built &mdash; prioritization and SLAs by priority, visible to TA, hiring teams, and HMs. Progress bars on documentation completion. Real-time visibility into where slowdowns sit.</li>
-          <li>First hiring plan projection: at current velocity, where do we land by EOY? Surface the gap in the first leadership review &mdash; not month 11.</li>
-          <li>TA team offers extended (target: 30&ndash;40% of function).</li>
-        </ul></div></div>
-        <div class="acc-nested accordion"><div class="accordion-head"><div class="ah-left"><div class="ah-title">Week 7 &mdash; TA partner onboarding + HM enablement audit</div><div class="ah-sub">Ramp new TA partners fast. Audit HM enablement before gaps become a bottleneck at scale.</div></div><div class="accordion-chevron">&#9660;</div></div><div class="accordion-body"><ul>
-          <li>TA partner onboarding: Day 1 orientation, tools access, hiring philosophy. Days 2&ndash;3, meetings with HMs and stakeholders. End of week, actively sourcing on prioritized roles.</li>
-          <li>HM enablement audit: where does the current onboarding for HMs work, where do things slip? No HM should be unclear on what's expected of them or when.</li>
-          <li>Build HM master checklist &mdash; zero gaps first, optimization later.</li>
-          <li>SCALE framework applied to all process design: Signal through real work, Compounding teams, AI-enabled, Leverages judgment, Elevates the work and team.</li>
-          <li>Deliverables: TA onboarding executed, new partners sourcing, HM gap analysis, HM master checklist v1, proposal for HM improvements.</li>
-        </ul></div></div>
-        <div class="acc-nested accordion"><div class="accordion-head"><div class="ah-left"><div class="ah-title">Week 8 &mdash; full employer brand strategy + ToF campaign</div><div class="ah-sub">You can't outrecruit a weak brand. Build the strategy that changes what candidates see and hear before they ever talk to a recruiter.</div></div><div class="accordion-chevron">&#9660;</div></div><div class="accordion-body"><ul>
-          <li>Brand audit: pull 4 weeks of lightweight data, build full strategy, present to the CEO and Marketing leadership.</li>
-          <li>Three brand signals: what you say (content), what you do (process and decisions), what others say about you (Glassdoor, Built In, third-party).</li>
-          <li>Five content pillars: product velocity, team growth and culture, milestones, leadership thought leadership, career growth stories.</li>
-          <li>What we test: outreach message framing, content format (video vs. static vs. carousel), posting cadence, mission vs. growth vs. culture angle.</li>
-          <li>Decision: continue lightweight or escalate to a full marketing campaign in Month 5 based on traction.</li>
-          <li>Deliverables: brand audit, content strategy, posting calendar (weeks 9&ndash;12), brand metrics baseline, Built In/Glassdoor activation plan.</li>
-        </ul></div></div>
-      </div>
-    </div>
+
+  <div class="plan-tabs">
+    <button class="plan-tab active" data-period="w1">Week 1 &mdash; Days 1&ndash;6</button>
+    <button class="plan-tab" data-period="w2">Week 2 &mdash; Days 7&ndash;12</button>
+    <button class="plan-tab" data-period="w34">Weeks 3&ndash;4 &mdash; Days 13&ndash;30</button>
+    <button class="plan-tab" data-period="p2">Phase 2 &mdash; Days 31&ndash;60</button>
+    <button class="plan-tab" data-period="p3">Phase 3 &mdash; Days 61&ndash;90</button>
   </div>
-  <div class="accordion">
-    <div class="accordion-head"><div class="ah-left"><div class="ah-eyebrow">Phase 3 &middot; Weeks 9&ndash;12</div><div class="ah-title">Optimize &amp; <em>scale.</em></div><div class="ah-sub">Tighten what six weeks of execution is telling us. Move from reactive to proactive talent engine.</div></div><div class="accordion-chevron">&#9660;</div></div>
-    <div class="accordion-body">
-      <p style="font-size: 14px;">The team is hired and ramping. By Week 12 the function should be operationally documented, the hiring plan reality-checked, and the year-end roadmap built. The Week-12 readout to the CEO isn't a status report &mdash; it's the partnership document that closes the 90-day window and opens the next twelve months.</p>
-      <div class="weeks-list">
-        <div class="acc-nested accordion"><div class="accordion-head"><div class="ah-left"><div class="ah-title">Week 9 &mdash; process optimization + comp audit + TA performance</div><div class="ah-sub">Tighten process. Set the performance foundation for the team.</div></div><div class="accordion-chevron">&#9660;</div></div><div class="accordion-body"><ul>
-          <li>Process champions debrief: bring back two champions (one tech, one non-tech) for structured feedback. What worked, what still has friction, what candidates are saying. Finalize process changes on real signal, not theory.</li>
-          <li>Comp benchmarking audit: pull offer accept rate and decline reasons from Ashby, cross-reference market data for top tech and GTM roles. Frame to the CEO and CFO as a revenue and retention conversation, not an HR ask.</li>
-          <li>Set individual TA KPIs: pipeline volume, screens, submittals/week, time-to-submit, accept rate. Establish 1:1 cadence &mdash; weekly operational, monthly coaching.</li>
-          <li>Build shared team dashboard &mdash; transparency creates accountability without micromanagement.</li>
-          <li>First funnel conversion review (tech vs. GTM separated). Identify top 2 conversion problems and build a fix for each.</li>
-        </ul></div></div>
-        <div class="acc-nested accordion"><div class="accordion-head"><div class="ah-left"><div class="ah-title">Week 10 &mdash; programs assessment + referral launch</div><div class="ah-sub">Move from reactive to a proactive talent engine. Prioritize programs by business need, readiness, and ROI timeline.</div></div><div class="accordion-chevron">&#9660;</div></div><div class="accordion-body"><ul>
-          <li>Programs assessment delivered to the CEO with timeline benchmarking: Referral Program (now), Silver Medalist Re-engagement (Month 4&ndash;5), Diversity Sourcing (Month 5&ndash;6), University/Early Career (Month 6&ndash;9), Full Brand Campaign (Month 5&ndash;6 if traction confirmed).</li>
-          <li>Referral program launch: simple, high-trust structure, bonus tied to seniority, paid at 90-day retention milestone. Promote via Slack, all-hands, and 1:1 asks during team check-ins.</li>
-          <li>Silver medalist re-engagement cadence built &mdash; warm, vetted candidates who almost made it. Low cost, high close rate.</li>
-          <li>Brand traction check: pull 6-week brand metrics &mdash; InMail response, follower growth, post engagement, Glassdoor trend, applicant source quality. Decision point &mdash; continue lightweight or escalate.</li>
-        </ul></div></div>
-        <div class="acc-nested accordion"><div class="accordion-head"><div class="ah-left"><div class="ah-title">Week 11 &mdash; hiring plan reality check + ToF deep dive</div><div class="ah-sub">Map landing position by department. Surface gaps with levers, not opinions.</div></div><div class="accordion-chevron">&#9660;</div></div><div class="accordion-body"><ul>
-          <li>Hiring plan reality check: hires made, roles in final stages, roles with strong pipelines, roles stalled. Project at current velocity by department &mdash; tech and GTM will land differently. If there's a gap, surface it with a clear plan and recommended levers.</li>
-          <li>Top-of-funnel deep dive: is volume improving? Track InMail response trends, apply rates, inbound vs. outbound week over week. If still low, diagnose whether issue is message, channel, role positioning, or comp.</li>
-          <li>HM accountability &mdash; data-led: pull SHP tracker data. Which hiring teams have completed documentation on time? Which create delays? Bring patterns to the exec team with data, not opinions.</li>
-          <li>TA team health check: are KPIs being hit, where does coaching need to happen, are partners blocked on something systemic, is workload distributed appropriately?</li>
-        </ul></div></div>
-        <div class="acc-nested accordion"><div class="accordion-head"><div class="ah-left"><div class="ah-title">Week 12 &mdash; operational documentation + year-end roadmap</div><div class="ah-sub">Close the 90-day window. Open the next twelve months with a forward-looking partnership document.</div></div><div class="accordion-chevron">&#9660;</div></div><div class="accordion-body"><ul>
-          <li>Operational documentation audit: every process, playbook, workflow built over 12 weeks is documented, accessible, owned. No single points of failure &mdash; if anyone is out for two weeks, the team executes cleanly.</li>
-          <li>Year-end roadmap: month-by-month plan to hit the hiring plan. Account for seasonal slowdowns (holiday pipeline drag), offer decline risk on late-stage candidates, ramp time for hires made in months 4&ndash;5, programs coming online in months 5&ndash;6.</li>
-          <li>CEO alignment session: what worked, what still needs investment, what decisions need to happen in the next 30 days to protect year-end outcomes. Align priorities for months 4&ndash;6.</li>
-          <li>TA function retrospective (internal): what's working, what's creating friction, what does the team need to do their best work? Builds trust and surfaces problems early.</li>
-        </ul></div></div>
-      </div>
-    </div>
+
+  <div class="plan-highlight">
+    <strong>No ramp period.</strong> Week 1 is diagnostic and build running in parallel. You're sourcing for the business AND your own team from Day 1. Aggressive on velocity &mdash; uncompromising on bar. Same standard we hold for product hires gets applied to TA hires.
+  </div>
+
+  <div class="plan-content active" data-period="w1">
+    <div class="plan-section-label">Days 1&ndash;6 &middot; Triage, align, and launch everything at once</div>
+
+    <div class="plan-day"><div class="day-num">Day 1</div><div class="day-content"><div class="day-title">Landing day <span class="day-tag day-tag-fire">fire drill</span></div><ul class="day-actions">
+      <li>Get ATS, recruiting platform, and HRIS access &mdash; before EOD</li>
+      <li>Pull full open req list &mdash; count, role type, HM, days open</li>
+      <li>Schedule all HM 1:1s for Days 2&ndash;4 (30 min each, back to back)</li>
+      <li>Pull last 90 days of TTF data &mdash; export raw if needed</li>
+      <li>Export current candidate pipeline &mdash; count active, stale, ghosted</li>
+      <li>Define your TA team structure on paper: Director of Talent, senior recruiters, sourcers, coordinator (matches the org &amp; team build)</li>
+      <li>Begin outreach for TA team roles Day 1 &mdash; same hiring bar we apply to product hires</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Day 2</div><div class="day-content"><div class="day-title">HM blitz, round one &mdash; highest priority roles</div><ul class="day-actions">
+      <li>HM 1:1s on top 5 revenue/ops-critical roles &mdash; ideal profile, timeline, blockers</li>
+      <li>Document every req: must-haves vs nice-to-haves, comp range, remote/onsite</li>
+      <li>Flag immediately: any reqs with unclear scope, unrealistic comp, or no urgency</li>
+      <li>Pull every existing JD &mdash; flag compliance issues on first read</li>
+      <li>Identify: which JDs have discriminatory language, missing EEO, or salary-range gaps</li>
+      <li>Reach out to 20+ TA candidates &mdash; recruiters, coordinators, sourcers &mdash; quality-first profile, not volume-first</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Day 3</div><div class="day-content"><div class="day-title">HM blitz, round two + ATS audit begins</div><ul class="day-actions">
+      <li>Finish remaining HM 1:1s &mdash; every open req has a documented profile by EOD</li>
+      <li>Stack-rank all reqs: Tier 1 (hire now), Tier 2 (this month), Tier 3 (pipeline)</li>
+      <li>ATS audit: map current stages &mdash; are they logical, are they being used?</li>
+      <li>Identify ATS dead weight: candidates sitting 30+ days with no action &mdash; tag for review</li>
+      <li>Write JDs for your own TA roles &mdash; Director of Talent first, then senior recruiters, sourcer, coordinator</li>
+      <li>Phone screen first 3&ndash;5 TA candidates from outreach</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Day 4</div><div class="day-content"><div class="day-title">Comp benchmark + ATS cleanup plan</div><ul class="day-actions">
+      <li>Pull comp data from market benchmarking sources for each role</li>
+      <li>Flag any role where internal band is more than 15% below market &mdash; escalate to leadership</li>
+      <li>Map new ATS pipeline stages: Applied &rarr; Screen &rarr; HM Review &rarr; Loop &rarr; Offer &rarr; Closed</li>
+      <li>Document ATS cleanup plan: what stages to collapse, rename, or retire</li>
+      <li>Begin JD compliance rewrite &mdash; start with Tier 1, use template (built Day 5)</li>
+      <li>Schedule TA team interviews for Days 8&ndash;10 &mdash; structured loop, calibrated rubric</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Day 5</div><div class="day-content"><div class="day-title">JD master template + sourcing sprint</div><ul class="day-actions">
+      <li>Build compliant JD master template: EEO statement, salary range, no exclusionary language</li>
+      <li>Template sections: role summary, outcomes (not tasks), requirements, comp, benefits, EEO</li>
+      <li>Rewrite Tier 1 JDs using template &mdash; minimum 3 done by EOD</li>
+      <li>50+ outreach messages to business-side candidates across Tier 1 roles</li>
+      <li>Push TA team JDs to job boards and niche talent communities</li>
+      <li>Check: does every JD include salary range? (required in many jurisdictions)</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Day 6</div><div class="day-content"><div class="day-title">Week 1 close-out + leadership sync</div><ul class="day-actions">
+      <li>Deliver Week 1 snapshot to leadership: req count, TTF baseline, ATS health, comp gaps</li>
+      <li>Present TA team hiring plan: roles, timeline, named candidates already in pipeline &mdash; bar quality, not volume</li>
+      <li>Confirm headcount approval for Phase 1 hires (Director of Talent + Head of HR Ops + 3 RPO contractors)</li>
+      <li>ATS cleanup: delete or archive reqs older than 180 days with no activity</li>
+      <li>All Tier 1 JDs rewritten with compliant template &mdash; posted by EOD</li>
+      <li>Plan Week 2 TA interviews &mdash; block calendar, build scorecard</li>
+    </ul></div></div>
+  </div>
+
+  <div class="plan-content" data-period="w2">
+    <div class="plan-section-label">Days 7&ndash;12 &middot; Activate recruiting; close the TA team loop</div>
+
+    <div class="plan-day"><div class="day-num">Day 7</div><div class="day-content"><div class="day-title">Active recruiting cadence</div><ul class="day-actions">
+      <li>All Tier 1 JDs live across job boards and channels</li>
+      <li>Daily standup with existing TA team + RPO contacts</li>
+      <li>First-round screens on inbound TA candidates begin</li>
+      <li>Active sourcing on Tier 1 reqs in parallel</li>
+      <li>HM enablement v0: light brief on interview standards &mdash; full enablement comes in Phase 2</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Day 8</div><div class="day-content"><div class="day-title">TA team reqs fully posted <span class="day-tag day-tag-mile">milestone</span></div><ul class="day-actions">
+      <li>All TA team JDs live across channels</li>
+      <li>Confirm pipeline depth: minimum 8&ndash;10 candidates per role</li>
+      <li>First 5 TA team phone screens completed</li>
+      <li>Cross-functional check: do active reqs reflect business priorities?</li>
+      <li>Active sourcing continues on Tier 1 business roles in parallel</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Day 9</div><div class="day-content"><div class="day-title">JD compliance push, Tier 2</div><ul class="day-actions">
+      <li>Rewrite Tier 2 JDs using master template</li>
+      <li>Cross-functional check on language, comp, requirements</li>
+      <li>Update existing live JDs where compliance gaps were identified</li>
+      <li>Continue TA team panel interviews</li>
+      <li>Identify process champion candidates &mdash; one tech HM, one non-tech HM</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Day 10</div><div class="day-content"><div class="day-title">ATS cleanup complete <span class="day-tag day-tag-mile">milestone</span></div><ul class="day-actions">
+      <li>All stale candidates archived or revived with HM call</li>
+      <li>Pipeline stages restructured per Day 4 plan</li>
+      <li>Reporting dashboard built: req status, stage counts, time-in-stage</li>
+      <li>Confirm clean source-of-truth for all active reqs</li>
+      <li>Hand off pipeline ownership to RPO contractors as they activate</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Day 11</div><div class="day-content"><div class="day-title">TA candidate panel + reference push</div><ul class="day-actions">
+      <li>Final-round panels for top TA candidates &mdash; Director of Talent loop especially structured</li>
+      <li>Reference checks on top 2&ndash;3 TA candidates &mdash; front-channel and back-channel</li>
+      <li>Calibration meeting with leadership on TA candidates &mdash; bar check, not volume push</li>
+      <li>HM check-ins on Tier 1 active reqs &mdash; pipeline status</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Day 12</div><div class="day-content"><div class="day-title">JD templates compliant <span class="day-tag day-tag-mile">milestone</span></div><ul class="day-actions">
+      <li>All open JDs rewritten with compliant template</li>
+      <li>EEO statement, salary range, outcomes-focused language across the board</li>
+      <li>Tier 1 + Tier 2 = 100% template-compliant</li>
+      <li>Begin JD A/B testing setup for two highest-volume roles</li>
+    </ul></div></div>
+  </div>
+
+  <div class="plan-content" data-period="w34">
+    <div class="plan-section-label">Days 13&ndash;30 &middot; TA team onboards; first hires close</div>
+
+    <div class="plan-day"><div class="day-num">Day 13&ndash;14</div><div class="day-content"><div class="day-title">TA offers extended <span class="day-tag day-tag-mile">milestone</span></div><ul class="day-actions">
+      <li>Verbal offers to top 2&ndash;3 TA candidates (Director of Talent + senior recruiters first)</li>
+      <li>Comp/equity training prepped for incoming TA team</li>
+      <li>Pre-boarding plan kicked off: company merch one week before start, slow-drip welcome from teammates</li>
+      <li>HM check-ins continue on Tier 1 &mdash; pipeline integrity over speed</li>
+      <li>3 RPO contractors signed and starting embedded onboarding</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Days 15&ndash;20</div><div class="day-content"><div class="day-title">TA team onboarding wave 1</div><ul class="day-actions">
+      <li>Director of Talent + senior recruiters start (staggered Days 15&ndash;18)</li>
+      <li>Each TA partner: Day 1 orientation, hiring philosophy, tools access</li>
+      <li>Days 2&ndash;3 of their tenure: meetings with HMs and stakeholders</li>
+      <li>End of Week 3: every new TA partner actively sourcing on prioritized roles</li>
+      <li>Comp benchmarking process documented and shared with hiring teams</li>
+      <li>3 RPO contractors fully embedded in ATS, attending team syncs, on the same standards as internal team</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Days 21&ndash;30</div><div class="day-content"><div class="day-title">First closes + process champions pilot</div><ul class="day-actions">
+      <li>Begin closing first business-side hires (Tier 1)</li>
+      <li>Process champions (one tech, one non-tech) running pilot of new interview loop</li>
+      <li>Pre-start engagement playbook v1 in use for every offer extended</li>
+      <li>First-round funnel data collected: where are candidates dropping?</li>
+      <li>Weekly metrics report cadence established for leadership</li>
+      <li>Phase 1 close: Head of HR Ops + Director of Talent in seat, RPO active, internal recruiters ramping (Month 1 = 0% capacity per ramp model)</li>
+    </ul></div></div>
+  </div>
+
+  <div class="plan-content" data-period="p2">
+    <div class="plan-section-label">Days 31&ndash;60 &middot; Build the machine, hire Phase 2 senior IC layer</div>
+
+    <div class="plan-day"><div class="day-num">Days 31&ndash;40</div><div class="day-content"><div class="day-title">Build, fix, activate at scale</div><ul class="day-actions">
+      <li>TA team fully ramping (Month 2 = 40% capacity per recruiter, per ramp model)</li>
+      <li>Active recruiting at full velocity across Tier 1 + Tier 2</li>
+      <li>Process champions debrief: what's working in the updated loop, what's not &mdash; finalize changes on real signal, not theory</li>
+      <li>Sourcing intelligence brief: where target talent actually lives by role type</li>
+      <li>Brand activation begins: leadership writes once a month, hiring managers write a short post per senior role they open</li>
+      <li>A/B test results from JD experiments &mdash; pick winners, retire losers</li>
+      <li>Phase 2 hiring opens: Sr. Tech Recruiter, Sr. Business Recruiter, Talent Ops &amp; Coord</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Days 41&ndash;50</div><div class="day-content"><div class="day-title">Offer process + pre-boarding push</div><ul class="day-actions">
+      <li>Deep-dive offer extension workflow &mdash; what's the experience from verbal to signature?</li>
+      <li>Where can we automate and streamline without making it feel transactional?</li>
+      <li>Pre-start engagement playbook fully active: company merch, team event invites, structured check-ins from recruiter and HM</li>
+      <li>Goal: by Day 1, new hires already feel like part of the team</li>
+      <li>First ATS dashboard cuts shared with HMs (org-level visibility)</li>
+      <li>Phase 2 TA candidates in panel rounds &mdash; same bar, no compromise under volume pressure</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Days 51&ndash;60</div><div class="day-content"><div class="day-title">Metrics + dashboards + first plan projection</div><ul class="day-actions">
+      <li>Monthly leadership hiring review cadence launched: metrics, tracking vs. plan, role adjustments</li>
+      <li>Reporting dashboards live for HMs, exec team, CEO &mdash; each calibrated for audience</li>
+      <li>SHP (Stakeholder Hiring Plan) tracker built &mdash; prioritization and SLAs visible to TA, HMs, hiring teams</li>
+      <li>First hiring plan projection: at current velocity, where do we land by EOY? Surface the gap in the first leadership review &mdash; not month 11</li>
+      <li>Phase 2 TA team offers extended (Sr. Tech Recruiter, Sr. Business Recruiter, Talent Ops &amp; Coord)</li>
+      <li>Phase 1 RPO ramping toward natural sunset; internal team picking up share</li>
+    </ul></div></div>
+  </div>
+
+  <div class="plan-content" data-period="p3">
+    <div class="plan-section-label">Days 61&ndash;90 &middot; Optimize, harden, hire Phase 3 compounding layer</div>
+
+    <div class="plan-day"><div class="day-num">Days 61&ndash;70</div><div class="day-content"><div class="day-title">TA partner onboarding wave 2 + HM enablement audit</div><ul class="day-actions">
+      <li>Phase 2 TA hires onboard staggered &mdash; senior recruiters and Talent Ops Specialist</li>
+      <li>HM enablement audit: where does HM onboarding work? Where do things slip?</li>
+      <li>Build HM master checklist &mdash; zero gaps first, optimization later</li>
+      <li>SCALE framework applied to all process design</li>
+      <li>Deliverables: TA onboarding executed, HM gap analysis, master checklist v1</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Days 71&ndash;80</div><div class="day-content"><div class="day-title">Full employer brand strategy + top-of-funnel campaign</div><ul class="day-actions">
+      <li>Brand audit complete, full strategy presented to CEO + Marketing leadership</li>
+      <li>Five content pillars activated: product velocity, team growth + culture, milestones, leadership thought leadership, career growth stories</li>
+      <li>Decision: continue lightweight or escalate to a full marketing campaign in Month 5 based on traction data</li>
+      <li>Begin Phase 3 hires: Tech Sourcer, Non-Tech Sourcer, Jr. Employer Brand &amp; Marketing, Jr. Generalist Recruiter</li>
+      <li>Same bar applied: compounding-layer roles get the same scrutiny as Phase 1 leadership</li>
+    </ul></div></div>
+
+    <div class="plan-day"><div class="day-num">Days 81&ndash;90</div><div class="day-content"><div class="day-title">Year-end roadmap + retrospective</div><ul class="day-actions">
+      <li>Comp benchmarking audit: pull offer accept rate and decline reasons &mdash; frame to CEO + CFO as a revenue and retention conversation, not an HR ask</li>
+      <li>Programs assessment delivered: Referral Program (now), Silver Medalist Re-engagement (Month 4&ndash;5), Diversity Sourcing (Month 5&ndash;6), University/Early Career (Month 6&ndash;9)</li>
+      <li>Year-end roadmap: month-by-month plan to hit the hiring plan, accounting for seasonal slowdowns and ramp time</li>
+      <li>CEO alignment session: what worked, what still needs investment, decisions needed in next 30 days to protect year-end outcomes</li>
+      <li>TA function retrospective (internal): what's working, what's creating friction, what does the team need to do their best work</li>
+    </ul></div></div>
   </div>
 </section>
 
@@ -868,7 +1011,7 @@ p strong { color: var(--ink-2); font-weight: 500; }
   <p style="font-size: 15.5px; max-width: 720px; margin-bottom: 14px;">A working prototype of the planning system embedded directly below. The TTF model, recruiter ramp curves, alerts, role lifecycle, and Finance forecast table all run live in the page.</p>
   <div class="callout-warm" style="margin-bottom: 22px;">A production rollout requires training on Ivo&#39;s actual data &mdash; ATS exports for historical TTF by role tier, real recruiter profiles and ramp dates, comp bands, and panel-load history. The defaults below are the system&#39;s baseline assumptions; calibration to Ivo&#39;s velocity sharpens every projection.</div>
   <p style="font-size: 13.5px; color: var(--ink-3); margin-bottom: 16px;">Click <strong>Load demo data</strong> in the prototype below to see it running on a sample dataset, or step through Setup to enter your own roles and recruiters. State persists in your browser; clear it any time via Setup.</p>
-  <div id="hc-prototype-root" class="hc-prototype-root"></div>
+  <div id="hc-prototype-root" class="hc-prototype-root"><div class="hc-prototype-loading">Loading prototype&hellip; first load fetches React + Babel from a CDN.</div></div>
   <div class="section-label" style="margin-top: 48px;">Production view &mdash; Dashboard</div>
   <div class="browser">
     <div class="browser-chrome"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">people.ivo.internal/capacity</div></div>
@@ -1074,6 +1217,18 @@ p strong { color: var(--ink-2); font-weight: 500; }
   </div>
 </section>
 <style>
+
+.hc-prototype-loading {
+  padding: 32px 28px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--paper-2);
+  color: var(--ink-3);
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+}
+
 .hc-prototype-root {
   margin: 24px 0 36px;
   font-family: 'DM Sans', sans-serif;
@@ -1123,6 +1278,19 @@ document.querySelectorAll('.accordion .accordion-head').forEach(head => {
     const acc = head.closest('.accordion');
     acc.classList.toggle('open');
   });
+
+document.querySelectorAll('.plan-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.plan-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.plan-content').forEach(c => c.classList.remove('active'));
+    tab.classList.add('active');
+    var period = tab.dataset.period;
+    var content = document.querySelector('.plan-content[data-period="' + period + '"]');
+    if (content) content.classList.add('active');
+    var section = document.getElementById('plan');
+    if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 });
 const f = id => document.getElementById(id);
 const inputs = ['i-hc','i-rec','i-sal','i-ttf','i-oar','i-bl'].map(f);
@@ -1202,9 +1370,22 @@ document.getElementById('dl-narrative').addEventListener('click', () => {
 });
 </script>
 
-<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
+<script>
+  // Surface any prototype errors visibly instead of silently failing
+  window.addEventListener('error', function(e) {
+    var mount = document.getElementById('hc-prototype-root');
+    if (mount && !mount.dataset.mounted) {
+      mount.innerHTML = '<div class="hc-prototype-loading">Prototype could not load. ' +
+        '<br><br>The page needs network access to unpkg.com for React + Babel CDN scripts. ' +
+        'If you\'re viewing this offline or behind a strict firewall, the prototype won\'t render. ' +
+        'All other content on this page works without network.<br><br>' +
+        '<span style="font-size:11px;color:var(--ink-4);">Error: ' + (e.message || 'unknown') + '</span></div>';
+    }
+  });
+</script>
 <script type="text/babel" data-presets="react">
 const { useState, useEffect, useCallback, useRef } = React;
 const SENIORITY_LEVELS = [
@@ -2432,7 +2613,12 @@ function HCApp() {
     </div>
   );
 }
-ReactDOM.createRoot(document.getElementById('hc-prototype-root')).render(<HCApp />);
+(function() {
+  var mount = document.getElementById('hc-prototype-root');
+  mount.innerHTML = '';
+  mount.dataset.mounted = 'true';
+  ReactDOM.createRoot(mount).render(<HCApp />);
+})();
 
 </script>
 </body>
